@@ -1,0 +1,474 @@
+<!-- ========================================================= -->
+<!-- HTML CANVAS & INTERACTIVE ELEMENTS -->
+<!-- ========================================================= -->
+
+<!--
+=========================================================
+PART 1 : HTML CANVAS
+=========================================================
+
+Definition: The <canvas> element provides a drawable area that JavaScript uses to create graphics, games, animations, charts, and more.
+
+Canvas itself is only a blank drawing surface.
+All drawing is done using JavaScript.
+
+Common Uses:
+
+✔ Games
+✔ Charts
+✔ Animations
+✔ Image Editing
+✔ Drawing Applications
+✔ Data Visualization
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Canvas & Interactive Elements</title>
+</head>
+
+<body>
+
+    <!-- Canvas -->
+    <canvas
+        id="canvas"
+        width="500"
+        height="300"
+        style="border:1px solid black;">
+    </canvas>
+
+    <script>
+
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+
+        /* Rectangle */
+
+        ctx.fillStyle = "royalblue";
+        ctx.fillRect(20,20,120,80);
+
+        /* Line */
+
+        ctx.beginPath();
+        ctx.moveTo(180,20);
+        ctx.lineTo(300,100);
+        ctx.stroke();
+
+        /* Circle */
+
+        ctx.beginPath();
+        ctx.arc(420,60,40,0,2*Math.PI);
+        ctx.fillStyle="orange";
+        ctx.fill();
+
+        /* Text */
+
+        ctx.font="24px Arial";
+        ctx.fillStyle="green";
+        ctx.fillText("Canvas",150,170);
+
+    </script>
+
+    <hr>
+
+    <!-- ===================================================== -->
+    <!-- Details -->
+    <!-- ===================================================== -->
+
+    <details>
+
+        <summary>What is HTML?</summary>
+
+        <p>
+            HTML stands for HyperText Markup Language.
+        </p>
+
+    </details>
+
+    <hr>
+
+    <!-- ===================================================== -->
+    <!-- Dialog -->
+    <!-- ===================================================== -->
+
+    <dialog open>
+
+        Welcome to HTML5!
+
+    </dialog>
+
+    <hr>
+
+    <!-- ===================================================== -->
+    <!-- Popover -->
+    <!-- ===================================================== -->
+
+    <button popovertarget="info">
+
+        Show Popover
+
+    </button>
+
+    <div
+        id="info"
+        popover>
+
+        HTML Popover Example
+
+    </div>
+
+</body>
+
+</html>
+
+<!-- ========================================================= -->
+<!-- CANVAS -->
+<!-- ========================================================= -->
+
+<!--
+Element: <canvas>
+Purpose: Creates a drawing surface.
+
+Example:
+
+<canvas
+width="500"
+height="300">
+
+Canvas is controlled using JavaScript.
+
+Common Context:
+2D
+WebGL
+WebGPU
+-->
+
+<!-- ========================================================= -->
+<!-- Drawing -->
+<!-- ========================================================= -->
+
+<!--
+
+Canvas API:
+
+const ctx =
+canvas.getContext("2d");
+
+Allows drawing:
+
+✔ Lines
+✔ Rectangles
+✔ Circles
+✔ Images
+✔ Text
+✔ Animations
+
+-->
+
+<!-- ========================================================= -->
+<!-- Lines -->
+<!-- ========================================================= -->
+
+<!--
+
+Methods:
+
+beginPath()
+moveTo()
+lineTo()
+stroke()
+
+Example:
+
+ctx.beginPath();
+ctx.moveTo(10,10);
+ctx.lineTo(100,100);
+ctx.stroke();
+
+-->
+
+<!-- ========================================================= -->
+<!-- Shapes -->
+<!-- ========================================================= -->
+
+<!--
+
+Rectangle
+fillRect()
+strokeRect()
+clearRect()
+
+----------------------------
+
+Circle
+arc()
+
+----------------------------
+
+Path
+beginPath()
+closePath()
+fill()
+stroke()
+
+-->
+
+<!-- ========================================================= -->
+<!-- Images -->
+<!-- ========================================================= -->
+
+<!--
+
+Draw image:
+
+const img=new Image();
+img.src="image.png";
+img.onload=function(){
+    ctx.drawImage(img,0,0);
+};
+
+-->
+
+<!-- ========================================================= -->
+<!-- Animation -->
+<!-- ========================================================= -->
+
+<!--
+
+Animation uses: requestAnimationFrame()
+Example:
+
+function animate(){
+    requestAnimationFrame(animate);
+}
+
+animate(); Better than setInterval().
+-->
+
+<!-- ========================================================= -->
+<!-- Game Basics -->
+<!-- ========================================================= -->
+
+<!--
+
+Canvas is commonly used for:
+
+✔ 2D Games
+✔ Collision Detection
+✔ Sprite Animation
+✔ Physics
+✔ Particle Systems
+✔ Keyboard Controls
+
+Popular Libraries:
+
+Phaser
+PixiJS
+Three.js (3D)
+
+-->
+
+<!-- ========================================================= -->
+<!-- INTERACTIVE ELEMENTS -->
+<!-- ========================================================= -->
+
+<!--
+
+Modern HTML provides interactive components without requiring much JavaScript.
+
+Elements:
+
+dialog
+details
+summary
+popover
+inert
+
+-->
+
+<!-- ========================================================= -->
+<!-- dialog -->
+<!-- ========================================================= -->
+
+<!--
+
+Purpose: Creates a modal dialog.
+
+Methods:
+
+show()
+showModal()
+close()
+
+Example:
+
+<dialog>
+    Hello
+</dialog>
+
+-->
+
+<!-- ========================================================= -->
+<!-- details -->
+<!-- ========================================================= -->
+
+<!--
+
+Purpose: Creates expandable content.
+
+Example:
+
+<details>
+    <summary>
+        Question
+    </summary>
+    Answer
+</details>
+
+-->
+
+<!-- ========================================================= -->
+<!-- summary -->
+<!-- ========================================================= -->
+
+<!--
+
+Purpose: Represents the heading for a <details> element.
+Only valid inside: <details>
+
+-->
+
+<!-- ========================================================= -->
+<!-- popover -->
+<!-- ========================================================= -->
+
+<!--
+
+Attribute: popover
+Purpose: Creates lightweight popups.
+
+Example:
+
+<div
+id="menu"
+popover>
+
+Menu
+
+</div>
+
+<button
+popovertarget="menu">
+
+Open
+
+</button>
+
+Modern HTML feature.
+Requires modern browsers.
+-->
+
+<!-- ========================================================= -->
+<!-- Command Patterns -->
+<!-- ========================================================= -->
+
+<!--
+
+Modern HTML encourages:
+
+Buttons
+Dialogs
+Popovers
+Menus
+
+using semantic attributes instead of custom JavaScript.
+
+Examples:
+
+showModal()
+close()
+popovertarget
+
+-->
+
+<!-- ========================================================= -->
+<!-- inert -->
+<!-- ========================================================= -->
+
+<!--
+
+Attribute: inert
+Purpose: Makes an element and all of its children non-interactive.
+
+Example:
+
+<div inert>
+    Content
+</div>
+
+Effects:
+
+✔ Cannot receive focus
+✔ Cannot be clicked
+✔ Hidden from screen readers
+
+Useful when dialogs are open.
+-->
+
+<!-- ========================================================= -->
+<!-- Best Practices -->
+<!-- ========================================================= -->
+
+<!--
+
+✔ Use Canvas for graphics, not layouts.
+✔ Use requestAnimationFrame() for animations.
+✔ Prefer dialog over custom modals.
+✔ Use details for FAQs.
+✔ Use popover for lightweight popups.
+✔ Use inert to disable inactive UI.
+
+-->
+
+<!-- ========================================================= -->
+<!-- Interview Questions -->
+<!-- ========================================================= -->
+
+<!--
+
+Q1. What is the purpose of the <canvas> element?
+Ans: It provides a drawable area for graphics using JavaScript.
+
+Q2. Can Canvas draw graphics without JavaScript?
+Ans: No.
+
+Q3. Which method retrieves the 2D drawing context?
+Ans: getContext("2d")
+
+Q4. Which function is recommended for Canvas animations?
+Ans: requestAnimationFrame()
+
+Q5. What is Canvas commonly used for?
+Ans: Games, charts, animations, and image manipulation.
+
+Q6. What is the purpose of the <dialog> element?
+Ans: To create modal or non-modal dialog boxes.
+
+Q7. Which elements create expandable content?
+Ans: <details> and <summary>.
+
+Q8. What is the popover attribute?
+Ans: A modern HTML feature for creating lightweight popups without custom JavaScript.
+
+Q9. What does the inert attribute do?
+Ans: It makes an element and its descendants non-interactive and removes them from the focus order.
+
+Q10. When should Canvas be used instead of SVG?
+Ans: Canvas is better for frequent pixel-based drawing and games, while SVG is better for scalable vector graphics like icons and diagrams.
+
+-->

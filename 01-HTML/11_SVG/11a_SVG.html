@@ -1,0 +1,464 @@
+<!-- ========================================================= -->
+<!-- HTML SVG (Scalable Vector Graphics) -->
+<!-- ========================================================= -->
+
+<!--
+Definition: 
+
+SVG (Scalable Vector Graphics) is an XML-based vector image format used to draw graphics directly in HTML.
+Unlike JPG or PNG, SVG images can scale infinitely without losing quality.
+
+Common Uses:
+
+✔ Icons
+✔ Logos
+✔ Charts
+✔ Graphs
+✔ Illustrations
+✔ Maps
+✔ Animations
+
+Advantages:
+
+✔ Resolution Independent
+✔ Small File Size
+✔ Searchable Text
+✔ CSS Styling
+✔ JavaScript Support
+✔ Built-in Animation
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML SVG</title>
+</head>
+<body>
+    <h1>SVG Examples</h1>
+
+    <!-- Basic SVG -->
+    <svg
+        width="300"
+        height="120"
+        style="border:1px solid gray">
+    </svg>
+
+    <hr>
+
+    <!-- Circle -->
+    <svg width="200" height="200">
+        <circle
+            cx="100"
+            cy="100"
+            r="70"
+            fill="dodgerblue"
+            stroke="black"
+            stroke-width="3" />
+    </svg>
+
+    <hr>
+
+    <!-- Rectangle -->
+    <svg width="250" height="150">
+        <rect
+            x="20"
+            y="20"
+            width="200"
+            height="100"
+            fill="orange"
+            stroke="black"
+            stroke-width="3" />
+    </svg>
+
+    <hr>
+
+    <!-- Line -->
+    <svg width="250" height="120">
+        <line
+            x1="20"
+            y1="20"
+            x2="220"
+            y2="100"
+            stroke="red"
+            stroke-width="4" />
+    </svg>
+
+    <hr>
+
+    <!-- Polygon -->
+    <svg width="250" height="200">
+        <polygon
+            points="125,20 220,180 30,180"
+            fill="lime"
+            stroke="black"
+            stroke-width="3" />
+    </svg>
+
+    <hr>
+
+    <!-- Path -->
+    <svg width="250" height="150">
+        <path
+            d="M20 120 L120 20 L220 120"
+            fill="none"
+            stroke="blue"
+            stroke-width="4" />
+    </svg>
+
+    <hr>
+
+    <!-- Text -->
+    <svg width="350" height="100">
+        <text
+            x="20"
+            y="60"
+            font-size="35"
+            fill="purple">
+            Hello SVG
+        </text>
+    </svg>
+
+    <hr>
+
+    <!-- Gradient -->
+    <svg width="300" height="150">
+        <defs>
+            <linearGradient id="grad">
+                <stop
+                    offset="0%"
+                    stop-color="red" />
+                <stop
+                    offset="100%"
+                    stop-color="yellow" />
+            </linearGradient>
+        </defs>
+
+        <rect
+            width="300"
+            height="150"
+            fill="url(#grad)" />
+    </svg>
+
+    <hr>
+
+    <!-- Animation -->
+    <svg width="300" height="120">
+        <circle
+            cx="50"
+            cy="60"
+            r="20"
+            fill="blue">
+
+            <animate
+                attributeName="cx"
+                from="50"
+                to="250"
+                dur="2s"
+                repeatCount="indefinite" />
+        </circle>
+    </svg>
+</body>
+</html>
+
+<!-- ========================================================= -->
+<!-- 1. <svg> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Creates an SVG drawing area.
+
+Example:
+
+<svg
+    width="300"
+    height="200">
+    ...
+</svg>
+
+Common Attributes:
+
+width
+height
+viewBox
+-->
+
+<!-- ========================================================= -->
+<!-- 2. Circle -->
+<!-- ========================================================= -->
+
+<!--
+Element: <circle>
+
+Attributes:
+cx
+Center X
+
+cy
+Center Y
+
+r
+Radius
+
+fill
+stroke
+stroke-width
+-->
+
+<!-- ========================================================= -->
+<!-- 3. Rect -->
+<!-- ========================================================= -->
+
+<!--
+Element: <rect>
+Attributes:
+
+x
+y
+width
+height
+rx
+Rounded Corner X
+ry
+Rounded Corner Y
+-->
+
+<!-- ========================================================= -->
+<!-- 4. Line -->
+<!-- ========================================================= -->
+
+<!--
+Element: <line>
+Attributes:
+
+x1
+y1
+x2
+y2
+stroke
+stroke-width
+-->
+
+<!-- ========================================================= -->
+<!-- 5. Polygon -->
+<!-- ========================================================= -->
+
+<!--
+Element: <polygon>
+Purpose: Draws a closed shape with multiple points.
+Example: points="50,10 90,90 10,90"
+-->
+
+<!-- ========================================================= -->
+<!-- 6. Path -->
+<!-- ========================================================= -->
+
+<!--
+Element: <path>
+Purpose: Creates complex shapes.
+Common Commands:
+
+M
+Move To
+
+L
+Line To
+
+H
+Horizontal Line
+
+V
+Vertical Line
+
+C
+Bezier Curve
+
+Q
+Quadratic Curve
+
+A
+Arc
+
+Z
+Close Path
+
+Example:
+
+d="M20 20 L100 20 L100 100 Z"
+-->
+
+<!-- ========================================================= -->
+<!-- 7. Text -->
+<!-- ========================================================= -->
+
+<!--
+Element: <text>
+Purpose: Displays text inside SVG.
+
+Common Attributes:
+
+x
+y
+font-size
+fill
+font-family
+-->
+
+<!-- ========================================================= -->
+<!-- 8. Gradients -->
+<!-- ========================================================= -->
+
+<!--
+Elements: <defs>
+
+<linearGradient>
+<radialGradient>
+
+Purpose: Creates gradient colors.
+Used with: fill="url(#gradientID)"
+-->
+
+<!-- ========================================================= -->
+<!-- 9. Animation -->
+<!-- ========================================================= -->
+
+<!--
+Element: <animate>
+Purpose: Animates SVG properties.
+
+Common Attributes:
+
+attributeName
+from
+to
+dur
+repeatCount
+
+Example:
+
+<animate
+    attributeName="cx"
+    from="10"
+    to="200"
+    dur="2s"
+    repeatCount="indefinite">
+
+-->
+
+<!-- ========================================================= -->
+<!-- Basic SVG Attributes -->
+<!-- ========================================================= -->
+
+<!--
+
+fill
+Fill Color
+
+----------------------------
+
+stroke
+Border Color
+
+----------------------------
+
+stroke-width
+Border Thickness
+
+----------------------------
+
+opacity
+Transparency
+
+----------------------------
+
+transform
+Rotate
+Scale
+Translate
+
+-->
+
+<!-- ========================================================= -->
+<!-- SVG vs Raster Images -->
+<!-- ========================================================= -->
+
+<!--
+
+SVG
+
+✔ Vector
+✔ Infinite Scaling
+✔ Editable
+✔ Small for Icons
+✔ CSS & JS Support
+
+----------------------------
+
+PNG / JPG
+
+✔ Raster
+✔ Pixel Based
+✔ Loses Quality on Zoom
+✔ Better for Photos
+
+-->
+
+<!-- ========================================================= -->
+<!-- Best Practices -->
+<!-- ========================================================= -->
+
+<!--
+
+✔ Use SVG for icons and logos.
+✔ Use viewBox for responsive SVGs.
+✔ Optimize SVG files.
+✔ Prefer CSS for styling.
+✔ Use animation sparingly.
+✔ Use descriptive IDs.
+
+-->
+
+<!-- ========================================================= -->
+<!-- Interview Questions -->
+<!-- ========================================================= -->
+
+<!--
+
+Q1. What does SVG stand for?
+Ans: Scalable Vector Graphics.
+
+Q2. What is the main advantage of SVG over PNG or JPG?
+Ans: SVG can scale infinitely without losing quality because it is vector-based.
+
+Q3. Which element creates the SVG canvas?
+Ans: <svg>
+
+Q4. Which element draws a circle?
+Ans: <circle>
+
+Q5. Which element draws a rectangle?
+Ans: <rect>
+
+Q6. Which element draws a straight line?
+Ans: <line>
+
+Q7. Which SVG element is the most powerful for creating complex shapes?
+Ans: <path>
+
+Q8. What is the purpose of the <defs> element?
+Ans: It stores reusable definitions such as gradients, filters, and symbols.
+
+Q9. How are gradients applied in SVG?
+Ans: By defining them inside <defs> and referencing them with fill="url(#id)".
+
+Q10. Which element is used for SVG animations?
+Ans: <animate>
+
+Q11. Can SVG be styled using CSS?
+Ans: Yes.
+
+Q12. Can JavaScript manipulate SVG elements?
+Ans: Yes, SVG elements are part of the DOM and can be accessed with JavaScript.
+
+-->
