@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Embedded Content Examples</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            line-height: 1.6;
+        }
+
+        iframe,
+        embed,
+        object{
+            border: 1px solid #ccc;
+            margin-bottom: 25px;
+        }
+
+        hr{
+            margin: 40px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>HTML Embedded Content</h1>
+
+    <!-- ===================================================== -->
+    <!-- 1. Basic iframe -->
+    <!-- ===================================================== -->
+
+    <h2>1. Basic iframe</h2>
+
+    <iframe
+        src="https://example.com"
+        title="Example Website"
+        width="700"
+        height="350"
+        loading="lazy">
+    </iframe>
+
+    <hr>
+
+    <!-- ===================================================== -->
+    <!-- 2. YouTube Video -->
+    <!-- ===================================================== -->
+
+    <h2>2. YouTube Video</h2>
+
+
+    <iframe 
+        width="560" height="315" 
+        src="https://www.youtube.com/embed/1pcikNlDB-4?si=Q_k6t0BQn-mN-ZyT" 
+        title="YouTube video player" 
+        frameborder="0" 
+        loading="lazy"
+        allow="
+            accelerometer; 
+            autoplay; 
+            clipboard-write; 
+            encrypted-media; 
+            gyroscope; 
+            picture-in-picture; 
+            web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
+
+
+    <hr>
+
+    <!-- ===================================================== -->
+    <!-- 3. Google Maps -->
+    <!-- ===================================================== -->
+
+    <h2>3. Google Maps</h2>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=YOUR_EMBED_LINK"
+        title="Google Map"
+        width="700"
+        height="450"
+        loading="lazy">
+    </iframe>
+
+    <hr>
+
+    <!-- ===================================================== -->
+    <!-- 4. Embed Local HTML Page -->
+    <!-- ===================================================== -->
+
+    <h2>4. Embed Another HTML Page</h2>
+
+    <iframe
+        src="../01_Basics/01_Basics.html"
+        title="About Page"
+        width="700"
+        height="300">
+    </iframe>
+
+    <hr>
+
+    <!-- ===================================================== -->
+    <!-- 5. Secure iframe using Sandbox -->
+    <!-- ===================================================== -->
+
+    <h2>5. Secure iframe (Sandbox)</h2>
+
+    <iframe
+        src="https://example.com"
+        title="Sandbox Example"
+        width="700"
+        height="350"
+        sandbox="allow-scripts allow-forms"
+        loading="lazy">
+    </iframe>
+
+    <hr>
+
+    <!-- ===================================================== -->
+    <!-- 6. Embed PDF -->
+    <!-- ===================================================== -->
+
+    <h2>6. PDF using embed</h2>
+
+    <embed
+        src="../../Assets/HTML.pdf"
+        type="application/pdf"
+        width="700"
+        height="500">
+
+    <hr>
+
+    <!-- ===================================================== -->
+    <!-- 7. Object Example -->
+    <!-- ===================================================== -->
+
+    <h2>7. PDF using object</h2>
+
+    <object
+        data="../../Assets/HTML.pdf"
+        type="application/pdf"
+        width="700"
+        height="500">
+
+        <p>
+            Your browser does not support PDF viewing.
+            <a href="../../Assets/HTML.pdf">Download PDF</a>
+        </p>
+
+    </object>
+
+    <hr>
+
+    <!-- ===================================================== -->
+    <!-- 8. Object with Image -->
+    <!-- ===================================================== -->
+
+    <h2>8. Image using object</h2>
+
+    <object
+        data="../../Assets/html.png"
+        type="image/png"
+        width="300"
+        height="300">
+
+        Image could not be loaded.
+
+    </object>
+
+    <hr>
+
+    <!-- ===================================================== -->
+    <!-- 9. Legacy param Example -->
+    <!-- ===================================================== -->
+
+    <h2>9. param (Legacy)</h2>
+
+    <object
+        data="../../Assets/movie.swf"
+        width="400"
+        height="300">
+
+        <param
+            name="autoplay"
+            value="true">
+
+        Flash content is no longer supported by modern browsers.
+
+    </object>
+
+</body>
+</html>
