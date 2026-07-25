@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Audio & Video</title>
+</head>
+
+<body>
+
+    <h2>HTML AUDIO TAG</h2>
+    <!-- ===================================================== -->
+    <!-- Audio (<audio>) -->
+    <!-- ===================================================== -->
+
+    <audio controls>
+        <source src="../../Assets/song.mp3" type="audio/mpeg">
+        <source src="../../Assets/song.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+
+    <hr><br>
+
+    <!-- ===================================================== -->
+    <!-- Video -->
+    <!-- ===================================================== -->
+
+    <h2>HTML VIDEO TAG</h2>
+    <video
+        controls muted loop
+        width="700"
+        height="400"
+        poster="../../Assets/poster.png">
+            
+        <source
+            src="../../Assets/sample.mp4"
+            type="video/mp4">
+
+        <source
+            src="../../Assets/sample.webm"
+            type="video/webm">
+
+        <track
+            src="../../Assets/captions/en.vtt"
+            kind="captions"
+            srclang="en"
+            label="English"
+            default>
+
+        Your browser does not support the video element.
+
+    </video>
+
+    <hr>
+
+    <!-- ===================================================== -->
+    <!-- Autoplay + Muted + Loop -->
+    <!-- ===================================================== -->
+
+    <video
+        autoplay
+        muted
+        loop
+        playsinline
+        height="400"
+        poster="../../Assets/poster.png">
+
+        <!--? When using the autoplay attribute with the <video> element, some browsers might require the video to be muted in order for the video to start playing automatically. This is due to browser policies regarding autoplaying media with sound, which can be intrusive to users. -->
+
+        <source
+            src="../../Assets/sample.webm"
+            type="video/webm">
+
+    </video>
+</body>
+</html>

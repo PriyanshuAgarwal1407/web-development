@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Images</title>
+</head>
+<body>
+    <!-- Basic Image -->
+    <img
+        src="../../Assets/nature.jpg"
+        alt="Nature Image"
+        width="450"
+        height="250"
+        title="Nature Image"
+    />
+    <hr>
+
+    <!-- Image with Link -->
+    <a href="https://google.com" target="_blank">
+        <img
+            src="../../Assets/ocean.jpg"
+            alt="Ocean Image"
+            width="450"
+            height="250"
+            title="Ocean Image"
+        />
+    </a>
+
+    <hr><br>
+
+    <!-- Lazy Loading -->
+    <img
+        src="../../Assets/forest.jpg"
+        alt="Forest Image"
+        width="450"
+        height="250"
+        title="Forest Image"
+        loading="lazy"
+    />
+    <hr><br>
+
+    <!-- Async Decoding -->
+    <img
+        src="../../Assets/water.jpg"
+        alt="Water Image"
+        width="450"
+        height="250"
+        title="Water Image"
+        decoding="async"
+    />
+    <hr><br>
+
+    <!-- Responsive Image -->
+    <!-- <img
+        src="../../Assets/forest.jpg"
+        srcset="
+            ../../Assets/forest.jpg 480w,
+            ../../Assets/forest.jpg 768w,
+            ../../Assets/forest.jpg 1200w"
+        sizes="
+            (max-width:600px) 100vw,
+            (max-width:900px) 50vw,
+            33vw"
+        alt="Responsive Image">
+    <hr><br> -->
+
+    <!-- Clickable Image -->
+    <img
+      src="../../Assets/html.png"
+      alt="Clickable Image"
+      usemap="#map"
+      width="250"
+      height="150"
+    />
+    <map name="map">
+      <area
+        shape="rect"
+        coords="0,0,125,150"
+        href="https://www.w3schools.com/html/"
+        alt="HTML"
+      />
+      <area
+        shape="rect"
+        coords="125,0,250,150"
+        href="https://www.w3schools.com/css/"
+        alt="CSS"
+      />
+</body>
+</html>
+
+
+<!--TODO  Deprecated attributes of HTML Images  -->
+<!-- align, border, hspace, vspace -->
