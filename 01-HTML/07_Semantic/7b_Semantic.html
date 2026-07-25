@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic HTML Example</title>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <h1>My First Semantic Webpage</h1>
+        <p>Learning Semantic HTML5 Elements</p>
+
+        <!-- Primary Navigation -->
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+
+        <!-- Related Content Section -->
+        <section>
+
+            <h2>Featured Course</h2>
+
+            <!-- Self-contained Content -->
+            <article>
+
+                <header>
+                    <h3>Complete HTML Course</h3>
+                </header>
+
+                <p>
+                    Learn HTML from beginner to advanced with practical
+                    examples, projects, and interview preparation.
+                </p>
+
+                <footer>
+                    Published by Priyanshu Agaarwal on June 28, 2026
+                </footer>
+
+            </article>
+
+        </section>
+
+        <!-- Sidebar -->
+        <aside>
+
+            <h2>Related Articles</h2>
+
+            <ul>
+                <li><a href="#">Introduction to HTML</a></li>
+                <li><a href="#">Semantic HTML Guide</a></li>
+                <li><a href="#">HTML Best Practices</a></li>
+            </ul>
+
+        </aside>
+
+        <hr>
+
+        <!-- Figure -->
+        <figure>
+
+            <img
+                src="../../Assets/html.png"
+                alt="Official HTML5 Logo"
+                height="120">
+
+            <figcaption>
+                Figure 1: Official HTML5 Logo
+            </figcaption>
+
+        </figure>
+
+        <br><br>
+        <!-- Expandable Content -->
+        <details>
+            <summary>Why Use Semantic HTML?</summary>
+            <p>
+                Semantic HTML improves accessibility,
+                search engine optimization (SEO),
+                code readability, and maintainability.
+            </p>
+        </details>
+
+        <br><br>
+        <!-- Dialog -->
+        <button onclick="document.getElementById('dialogBox').showModal()">
+            Open Dialog
+        </button>
+
+        <dialog id="dialogBox">
+            <h2>Welcome!</h2>
+            <p>
+                This is an example of the HTML
+                <code>&lt;dialog&gt;</code> element.
+            </p>
+            <button onclick="document.getElementById('dialogBox').close()">
+                Close
+            </button>
+        </dialog>
+
+        <br><br>        
+        <!-- Search -->
+        <search>
+            <form>
+                <label for="searchBox">
+                    Search Courses
+                </label>
+
+                <br>
+                <input
+                    type="search"
+                    id="searchBox"
+                    placeholder="Search HTML Tutorials">
+
+                <button type="submit">
+                    Search
+                </button>
+            </form>
+        </search>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 My First Semantic Webpage. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
