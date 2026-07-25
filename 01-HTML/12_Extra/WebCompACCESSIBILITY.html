@@ -1,0 +1,539 @@
+<!-- ========================================================= -->
+<!-- HTML WEB COMPONENTS & ACCESSIBILITY -->
+<!-- ========================================================= -->
+
+<!--
+=========================================================
+PART 13 : WEB COMPONENTS BASICS
+=========================================================
+
+Web Components are a set of web standards that allow developers to create reusable, encapsulated, and custom HTML elements.
+
+Main Concepts:
+
+✔ Template
+✔ Slot
+✔ Shadow DOM
+✔ Custom Elements
+
+Benefits:
+
+✔ Reusable Components
+✔ Encapsulation
+✔ Better Maintainability
+✔ Framework Independent
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Components & Accessibility</title>
+</head>
+<body>
+    <!-- Template -->
+    <template id="card-template">
+        <div class="card">
+            <h2>HTML Course</h2>
+            <p>Reusable Card Component</p>
+        </div>
+    </template>
+
+    <!-- Slot -->
+    <template id="profile-card">
+        <div class="profile">
+            <h2>
+                <slot name="title">
+                    Default Title
+                </slot>
+            </h2>
+            <slot>
+                Default Content
+            </slot>
+        </div>
+    </template>
+
+    <!-- Example Usage -->
+    <profile-card>
+        <span slot="title">
+            Priyanshu
+        </span>
+        Learning Web Components
+    </profile-card>
+    <hr>
+
+    <!-- Skip Link -->
+    <a href="#main-content">
+        Skip to Main Content
+    </a>
+
+    <header>
+        Website Header
+    </header>
+
+    <nav>
+        Navigation
+    </nav>
+
+    <main id="main-content">
+        <h1>Accessibility Demo</h1>
+        <!-- Accessible Form -->
+        <form>
+            <label for="email">
+                Email
+            </label>
+            <input
+                id="email"
+                type="email"
+                required>
+            <button>
+                Submit
+            </button>
+        </form>
+
+        <hr>
+
+        <!-- Accessible Table -->
+        <table>
+            <caption>
+                Student List
+            </caption>
+            <thead>
+                <tr>
+                    <th scope="col">
+                        Name
+                    </th>
+                    <th scope="col">
+                        Course
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Priyanshu</td>
+                    <td>Computer Science</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        Footer
+    </footer>
+</body>
+</html>
+
+<!-- ========================================================= -->
+<!-- PART 16 : WEB COMPONENTS -->
+<!-- ========================================================= -->
+
+<!-- ========================================================= -->
+<!-- template -->
+<!-- ========================================================= -->
+
+<!--
+
+Purpose: Stores reusable HTML that is not rendered immediately.
+Example:
+
+<template>
+...
+</template>
+
+JavaScript can clone and display it later.
+
+-->
+
+<!-- ========================================================= -->
+<!-- slot -->
+<!-- ========================================================= -->
+
+<!--
+
+Purpose: Defines placeholders inside a Web Component.
+Allows users to insert custom content.
+
+Example:
+
+<slot>
+Default Content
+</slot>
+
+Named Slot: <slot name="header">
+
+-->
+
+<!-- ========================================================= -->
+<!-- Shadow DOM (Concept) -->
+<!-- ========================================================= -->
+
+<!--
+
+Purpose: Creates an isolated DOM tree.
+
+Benefits:
+✔ Encapsulation
+✔ Prevents CSS Conflicts
+✔ Prevents JavaScript Conflicts
+
+Example:
+
+element.attachShadow({
+mode:"open"
+});
+
+Used by:
+
+Video Players
+Date Pickers
+UI Components
+
+-->
+
+<!-- ========================================================= -->
+<!-- Custom Elements (Concept) -->
+<!-- ========================================================= -->
+
+<!--
+
+Purpose: Allows developers to create their own HTML tags.
+
+Example:
+
+<user-card>
+</user-card>
+
+JavaScript: customElements.define()
+
+Benefits:
+
+✔ Reusable Components
+✔ Cleaner HTML
+✔ Framework Independent
+
+-->
+
+<!-- ========================================================= -->
+<!-- PART 17 : ACCESSIBILITY -->
+<!-- ========================================================= -->
+
+<!--
+
+Accessibility (a11y): Means making websites usable by everyone, including users with disabilities.
+
+Benefits:
+
+✔ Better UX
+✔ Better SEO
+✔ Legal Compliance
+✔ Inclusive Design
+
+-->
+
+<!-- ========================================================= -->
+<!-- Semantic HTML -->
+<!-- ========================================================= -->
+
+<!--
+
+Use:
+
+<header>
+<nav>
+<main>
+<section>
+<article>
+<footer>
+
+instead of unnecessary <div> elements.
+
+Semantic HTML improves:
+
+✔ Screen Readers
+✔ SEO
+✔ Keyboard Navigation
+
+-->
+
+<!-- ========================================================= -->
+<!-- ARIA Basics -->
+<!-- ========================================================= -->
+
+<!--
+
+ARIA: Accessible Rich Internet Applications. Provides additional accessibility information.
+
+Common Attributes:
+
+aria-label
+aria-hidden
+aria-expanded
+aria-live
+
+Example:
+
+<button
+aria-label="Close">
+
+-->
+
+<!-- ========================================================= -->
+<!-- Roles -->
+<!-- ========================================================= -->
+
+<!--
+
+role="button"
+role="dialog"
+role="navigation"
+role="alert"
+role="main"
+
+Use only when semantic HTML cannot provide the same meaning.
+
+-->
+
+<!-- ========================================================= -->
+<!-- Labels -->
+<!-- ========================================================= -->
+
+<!--
+
+Always associate labels with form controls.
+Example: <label for="email">
+
+Email
+
+</label>
+
+<input
+id="email">
+
+-->
+
+<!-- ========================================================= -->
+<!-- Keyboard Navigation -->
+<!-- ========================================================= -->
+
+<!--
+
+Every interactive element must be usable with:
+
+Tab
+Shift + Tab
+Enter
+Space
+
+Avoid mouse-only interactions.
+
+-->
+
+<!-- ========================================================= -->
+<!-- Focus Management -->
+<!-- ========================================================= -->
+
+<!--
+
+Ensure visible focus indicators.
+
+Use:
+
+tabindex
+focus()
+dialog.showModal()
+
+Never remove focus outlines without providing an alternative.
+
+-->
+
+<!-- ========================================================= -->
+<!-- Screen Readers -->
+<!-- ========================================================= -->
+
+<!--
+
+Examples:
+
+NVDA
+JAWS
+VoiceOver
+Narrator
+
+Use:
+Semantic HTML
+Labels
+ARIA
+Alt Text
+
+-->
+
+<!-- ========================================================= -->
+<!-- Color Contrast -->
+<!-- ========================================================= -->
+
+<!--
+
+Ensure sufficient contrast.
+
+Recommended:
+
+Normal Text
+4.5 : 1
+
+Large Text
+3 : 1
+
+Avoid relying only on color to convey information.
+
+-->
+
+<!-- ========================================================= -->
+<!-- Skip Links -->
+<!-- ========================================================= -->
+
+<!--
+
+Purpose: Allows keyboard users to skip repetitive navigation.
+
+Example:
+
+<a href="#main">
+    Skip to Main Content
+</a>
+
+-->
+
+<!-- ========================================================= -->
+<!-- Landmarks -->
+<!-- ========================================================= -->
+
+<!--
+
+Examples:
+
+<header>
+<nav>
+<main>
+<aside>
+<footer>
+
+These help screen readers navigate pages efficiently.
+
+-->
+
+<!-- ========================================================= -->
+<!-- Accessible Forms -->
+<!-- ========================================================= -->
+
+<!--
+
+✔ Labels
+✔ Required Indicators
+✔ Error Messages
+✔ Keyboard Support
+✔ Fieldset
+✔ Legend
+✔ Placeholder not as label
+
+-->
+
+<!-- ========================================================= -->
+<!-- Accessible Tables -->
+<!-- ========================================================= -->
+
+<!--
+
+✔ caption
+✔ thead
+✔ tbody
+✔ th
+✔ scope
+✔ Meaningful Headers
+
+-->
+
+<!-- ========================================================= -->
+<!-- Accessible Buttons -->
+<!-- ========================================================= -->
+
+<!--
+
+✔ Clear Text
+✔ Keyboard Accessible
+✔ Proper Focus
+✔ aria-label when needed
+
+Bad:
+<button>
+
+✔
+Good:
+
+<button
+aria-label="Close">
+
+✕
+
+-->
+
+<!-- ========================================================= -->
+<!-- Best Practices -->
+<!-- ========================================================= -->
+
+<!--
+
+✔ Prefer semantic HTML.
+✔ Use labels for all inputs.
+✔ Use alt text for images.
+✔ Test using keyboard only.
+✔ Maintain visible focus.
+✔ Use sufficient color contrast.
+✔ Add captions to tables.
+✔ Use ARIA only when necessary.
+✔ Test with screen readers.
+
+-->
+
+<!-- ========================================================= -->
+<!-- Interview Questions -->
+<!-- ========================================================= -->
+
+<!--
+
+Q1. What are Web Components?
+Ans: A set of web standards for creating reusable, encapsulated custom HTML elements.
+
+Q2. What is the purpose of the <template> element?
+Ans: It stores reusable HTML content that is not rendered until activated with JavaScript.
+
+Q3. What is a <slot> used for?
+Ans: It defines placeholders where external content can be inserted into a Web Component.
+
+Q4. What is the Shadow DOM?
+Ans: An isolated DOM tree that encapsulates a component's structure, styles, and behavior.
+
+Q5. What are Custom Elements?
+Ans: Developer-defined HTML elements created using the Custom Elements API.
+
+Q6. What does accessibility (a11y) mean?
+Ans: Designing websites so they can be used by everyone, including people with disabilities.
+
+Q7. Why is semantic HTML important for accessibility?
+Ans: It provides meaningful structure that screen readers and assistive technologies can understand.
+
+Q8. What is ARIA?
+Ans: Accessible Rich Internet Applications, a specification that adds accessibility information to HTML elements.
+
+Q9. Why should every form control have a label?
+Ans: To improve usability and allow screen readers to correctly identify form fields.
+
+Q10. What is a skip link?
+Ans: A link that allows keyboard users to bypass repetitive navigation and jump directly to the main content.
+
+Q11. What are landmarks in HTML?
+Ans: Semantic regions such as <header>, <nav>, <main>, <aside>, and <footer> that help assistive technologies navigate a page.
+
+Q12. Should ARIA replace semantic HTML?
+Ans: No. Semantic HTML should be used first, and ARIA should only be added when native HTML cannot provide the required accessibility.
+
+-->

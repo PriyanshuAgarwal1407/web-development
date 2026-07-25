@@ -1,0 +1,368 @@
+<!-- ========================================================= -->
+<!-- HTML DOCUMENT STRUCTURE -->
+<!-- ========================================================= -->
+
+<!--
+Every HTML document follows a standard structure.
+
+<!DOCTYPE html>      → Declares the document as HTML5
+<html>               → Root element
+<head>               → Contains metadata (not displayed)
+<body>               → Contains visible webpage content
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Character Encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Title -->
+    <title>HTML Document Structure</title>
+
+    <!-- Base URL -->
+    <base href="https://example.com/" target="_blank">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Welcome to HTML</h1>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Displayed when JavaScript is disabled -->
+    <noscript>
+        JavaScript is disabled in your browser.
+    </noscript>
+
+</body>
+</html>
+
+<!-- ========================================================= -->
+<!-- 1. <html> -->
+<!-- ========================================================= -->
+
+<!--
+Definition: The <html> element is the root element of every HTML document.
+
+Purpose:
+• Wraps the entire webpage.
+• Contains both <head> and <body>.
+• Usually includes the language attribute.
+
+Example:
+
+<html lang="en">
+...
+</html>
+
+Common Attribute:
+
+lang="en"
+
+Benefits:
+✔ Accessibility
+✔ SEO
+✔ Screen readers
+✔ Browser language detection
+-->
+
+<!-- ========================================================= -->
+<!-- 2. <head> -->
+<!-- ========================================================= -->
+
+<!--
+Definition:
+The <head> element contains metadata about the webpage.
+Content inside <head> is NOT displayed on the webpage.
+
+Common Elements:
+
+<title>
+<meta>
+<link>
+<style>
+<script>
+<base>
+
+Purpose:
+
+• Page information
+• SEO
+• CSS
+• JavaScript
+• Icons
+• Fonts
+-->
+
+<!-- ========================================================= -->
+<!-- 3. <body> -->
+<!-- ========================================================= -->
+
+<!--
+Definition:
+The <body> contains everything visible to the user.
+
+Examples:
+
+Headings
+Paragraphs
+Images
+Videos
+Tables
+Forms
+Buttons
+Lists
+
+Everything displayed in the browser belongs inside <body>.
+-->
+
+<!-- ========================================================= -->
+<!-- 4. <title> -->
+<!-- ========================================================= -->
+
+<!--
+Definition:
+Defines the webpage title.
+
+Syntax:
+
+<title>My Website</title>
+
+Appears in:
+
+• Browser tab
+• Bookmarks
+• Search engine results
+
+Best Practices:
+
+✔ Unique for every page
+✔ Short (50–60 characters)
+✔ Descriptive
+-->
+
+<!-- ========================================================= -->
+<!-- 5. <meta> -->
+<!-- ========================================================= -->
+
+<!--
+Definition:
+Provides metadata about the webpage.
+
+It has no closing tag.
+
+Common Examples:
+
+Character Encoding
+
+<meta charset="UTF-8">
+
+Responsive Design
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+Description
+
+<meta name="description"
+      content="Learn HTML from beginner to advanced.">
+
+Keywords
+
+<meta name="keywords"
+      content="HTML, CSS, JavaScript">
+
+Author
+
+<meta name="author"
+      content="Your Name">
+
+Purpose:
+
+✔ SEO
+✔ Browser behavior
+✔ Responsive design
+✔ Character encoding
+-->
+
+<!-- ========================================================= -->
+<!-- 6. <base> -->
+<!-- ========================================================= -->
+
+<!--
+Definition:
+Specifies the default URL and target for all relative links.
+
+Example:
+
+<base href="https://example.com/">
+
+Now
+
+<a href="about.html">
+
+becomes
+
+https://example.com/about.html
+
+Notes:
+
+• Only one <base> element is allowed.
+• Must appear inside <head>.
+-->
+
+<!-- ========================================================= -->
+<!-- 7. <link> -->
+<!-- ========================================================= -->
+
+<!--
+Definition: Links external resources to the webpage.
+
+Common Uses:
+
+CSS
+
+<link rel="stylesheet" href="style.css">
+
+Favicon
+
+<link rel="icon" href="favicon.ico">
+
+Google Fonts
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+Characteristics:
+
+✔ Void element
+✔ No closing tag
+-->
+
+<!-- ========================================================= -->
+<!-- 8. <style> -->
+<!-- ========================================================= -->
+
+<!--
+Definition:
+Contains internal CSS.
+
+Example:
+
+<style>
+body{
+    background:white;
+}
+</style>
+
+Purpose:
+
+• Internal styling
+• Quick prototypes
+• Small projects
+
+Large projects usually use external CSS files.
+-->
+
+<!-- ========================================================= -->
+<!-- 9. <script> -->
+<!-- ========================================================= -->
+
+<!--
+Definition:
+Adds JavaScript to the webpage.
+
+External JS
+
+<script src="script.js"></script>
+
+Internal JS
+
+<script>
+console.log("Hello");
+</script>
+
+Purpose:
+
+✔ Interactivity
+✔ Validation
+✔ DOM Manipulation
+✔ API Calls
+✔ Animations
+
+Usually placed before </body> for better performance.
+-->
+
+<!-- ========================================================= -->
+<!-- 10. <noscript> -->
+<!-- ========================================================= -->
+
+<!--
+Definition:
+Displays content when JavaScript is disabled or unsupported.
+
+Example:
+
+<noscript>
+Enable JavaScript to use this website.
+</noscript>
+
+Purpose:
+
+✔ Inform users
+✔ Provide fallback content
+✔ Improve accessibility
+-->
+
+<!-- ========================================================= -->
+<!-- Interview Questions -->
+<!-- ========================================================= -->
+
+<!--
+Q1. Which element is the root of an HTML document?
+Ans: <html>
+
+Q2. What is the purpose of the <head> element?
+Ans: It stores metadata, links to CSS/JS, title, and other information not displayed on the webpage.
+
+Q3. What is displayed inside the browser window?
+Ans: Everything inside the <body> element.
+
+Q4. What is the purpose of the <title> element?
+Ans: It defines the title shown in the browser tab and search engine results.
+
+Q5. Which meta tag is required for proper UTF-8 encoding?
+Ans: <meta charset="UTF-8">
+
+Q6. Why is the viewport meta tag important?
+Ans: It makes webpages responsive on mobile devices.
+
+Q7. What is the purpose of the <base> element?
+Ans: It sets the default URL and/or target for all relative URLs in the document.
+
+Q8. What is the difference between <link> and <style>?
+Ans: <link> loads external CSS, while <style> contains internal CSS.
+
+Q9. Where is JavaScript commonly placed?
+Ans: Before the closing </body> tag for better page loading performance.
+
+Q10. What is the purpose of <noscript>?
+Ans: It displays fallback content when JavaScript is disabled.
+-->

@@ -1,0 +1,480 @@
+<!-- ========================================================= -->
+<!-- HTML SEO BASICS (2026 Edition) -->
+<!-- ========================================================= -->
+
+<!--
+Definition:
+
+SEO (Search Engine Optimization) is the process of optimizing web pages so that search engines like Google can understand, index, and rank them better.
+
+Goals:
+
+✔ Higher Search Rankings
+✔ More Organic Traffic
+✔ Better User Experience
+✔ Improved Accessibility
+✔ Faster Indexing
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Character Encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive Design -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <!-- ===================================================== -->
+    <!-- Title -->
+    <!-- ===================================================== -->
+
+    <title>
+        Complete HTML5 Course | Learn HTML from Beginner to Advanced
+    </title>
+
+    <!-- ===================================================== -->
+    <!-- Meta Description -->
+    <!-- ===================================================== -->
+
+    <meta
+        name="description"
+        content="Learn complete HTML5 with practical examples, accessibility, SEO, forms, semantic HTML, SVG, Canvas and modern web development.">
+
+    <!-- ===================================================== -->
+    <!-- Robots -->
+    <!-- ===================================================== -->
+
+    <meta
+        name="robots"
+        content="index,follow">
+
+    <!-- ===================================================== -->
+    <!-- Canonical URL -->
+    <!-- ===================================================== -->
+
+    <link
+        rel="canonical"
+        href="https://example.com/html-course">
+
+    <!-- ===================================================== -->
+    <!-- Open Graph -->
+    <!-- ===================================================== -->
+
+    <meta
+        property="og:title"
+        content="Complete HTML5 Course">
+
+    <meta
+        property="og:description"
+        content="Modern HTML5 Course with examples.">
+
+    <meta
+        property="og:image"
+        content="images/cover.jpg">
+
+    <meta
+        property="og:url"
+        content="https://example.com/html-course">
+
+    <meta
+        property="og:type"
+        content="website">
+
+    <!-- ===================================================== -->
+    <!-- Twitter Cards -->
+    <!-- ===================================================== -->
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image">
+
+    <meta
+        name="twitter:title"
+        content="Complete HTML5 Course">
+
+    <meta
+        name="twitter:description"
+        content="Modern HTML5 learning resource.">
+
+    <meta
+        name="twitter:image"
+        content="images/cover.jpg">
+
+    <!-- ===================================================== -->
+    <!-- Structured Data (JSON-LD) -->
+    <!-- ===================================================== -->
+
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Course",
+      "name":"Complete HTML5 Course",
+      "provider":{
+        "@type":"Organization",
+        "name":"Example Academy"
+      }
+    }
+    </script>
+
+</head>
+<body>
+<header>
+    <h1>Complete HTML5 Course</h1>
+</header>
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Courses</a>
+    <a href="#">Contact</a>
+</nav>
+<main>
+    <section>
+        <h2>Learn HTML5</h2>
+        <p>
+            Master HTML5 with semantic elements,
+            accessibility, forms, SEO, SVG, Canvas,
+            and modern best practices.
+        </p>
+        <img
+            src="images/html5.png"
+            alt="HTML5 Official Logo">
+    </section>
+</main>
+<footer>
+    © 2026 HTML Course
+</footer>
+</body>
+</html>
+
+<!-- ========================================================= -->
+<!-- 1. Title -->
+<!-- ========================================================= -->
+
+<!--
+
+Purpose: Defines the page title shown in:
+
+✔ Browser Tab
+✔ Search Results
+✔ Bookmarks
+
+Best Practice: 50–60 characters
+Unique for every page.
+
+Example:
+
+<title>
+    Complete HTML5 Course
+</title>
+
+-->
+
+<!-- ========================================================= -->
+<!-- 2. Meta Description -->
+<!-- ========================================================= -->
+
+<!--
+
+Purpose: Brief description shown in search results.
+
+Best Length: 150–160 characters.
+
+Example:
+
+<meta
+name="description"
+content="Learn HTML5...">
+
+-->
+
+<!-- ========================================================= -->
+<!-- 3. Headings -->
+<!-- ========================================================= -->
+
+<!--
+
+Use proper hierarchy:
+
+<h1>
+↓
+<h2>
+↓
+<h3>
+...
+
+Only one primary <h1> per page.
+
+Benefits:
+
+✔ SEO
+✔ Accessibility
+✔ Better Structure
+
+-->
+
+<!-- ========================================================= -->
+<!-- 4. Semantic HTML -->
+<!-- ========================================================= -->
+
+<!--
+
+Use:
+
+<header>
+<nav>
+<main>
+<section>
+<article>
+<aside>
+<footer>
+
+instead of generic <div> elements.
+
+Benefits:
+
+✔ Better SEO
+✔ Better Accessibility
+✔ Easier Crawling
+
+-->
+
+<!-- ========================================================= -->
+<!-- 5. Image alt -->
+<!-- ========================================================= -->
+
+<!--
+
+Always add: alt
+
+Example:
+
+<img
+src="logo.png"
+alt="HTML5 Logo">
+
+Benefits:
+
+✔ Accessibility
+✔ SEO
+✔ Image Search
+
+-->
+
+<!-- ========================================================= -->
+<!-- 6. Structured Data -->
+<!-- ========================================================= -->
+
+<!--
+
+Structured Data
+
+(Schema.org)
+
+Provides machine-readable information.
+
+Common Types:
+
+Course
+Article
+Product
+FAQ
+Organization
+Breadcrumb
+Usually written using:
+JSON-LD
+
+-->
+
+<!-- ========================================================= -->
+<!-- 7. Canonical URL -->
+<!-- ========================================================= -->
+
+<!--
+
+Purpose: Prevents duplicate-content issues.
+
+Example:
+
+<link
+rel="canonical"
+href="https://example.com/page">
+
+Search engines treat this as the preferred version.
+
+-->
+
+<!-- ========================================================= -->
+<!-- 8. Robots -->
+<!-- ========================================================= -->
+
+<!--
+
+Meta Robots
+
+Example:
+
+<meta
+name="robots"
+content="index,follow">
+
+Common Values:
+
+index
+noindex
+follow
+nofollow
+
+Controls how search engines crawl and index pages.
+
+-->
+
+<!-- ========================================================= -->
+<!-- 9. Sitemap -->
+<!-- ========================================================= -->
+
+<!--
+
+Purpose: Lists all important pages for search engines.
+Usually: sitemap.xml
+Example: https://example.com/sitemap.xml
+
+Benefits:
+
+✔ Faster Indexing
+✔ Better Crawling
+
+-->
+
+<!-- ========================================================= -->
+<!-- 10. Open Graph -->
+<!-- ========================================================= -->
+
+<!--
+
+Used by:
+
+Facebook
+LinkedIn
+Discord
+WhatsApp
+Controls link previews.
+
+Common Tags:
+
+og:title
+og:description
+og:image
+og:url
+og:type
+
+-->
+
+<!-- ========================================================= -->
+<!-- 11. Twitter Cards -->
+<!-- ========================================================= -->
+
+<!--
+
+Controls Twitter/X previews.
+
+Common Tags:
+
+twitter:card
+twitter:title
+twitter:description
+twitter:image
+
+Common Card: summary_large_image
+
+-->
+
+<!-- ========================================================= -->
+<!-- Modern SEO Checklist -->
+<!-- ========================================================= -->
+
+<!--
+
+✔ Unique Title
+✔ Meta Description
+✔ Semantic HTML
+✔ Responsive Design
+✔ HTTPS
+✔ Fast Loading
+✔ Image alt
+✔ Structured Data
+✔ Canonical URL
+✔ Robots Meta
+✔ Sitemap
+✔ Open Graph
+✔ Twitter Cards
+✔ Accessibility
+✔ Mobile Friendly
+✔ Core Web Vitals
+
+-->
+
+<!-- ========================================================= -->
+<!-- Best Practices -->
+<!-- ========================================================= -->
+
+<!--
+
+✔ Write unique titles.
+✔ Use meaningful headings.
+✔ Keep descriptions concise.
+✔ Optimize images.
+✔ Use semantic HTML.
+✔ Add structured data.
+✔ Avoid duplicate content.
+✔ Use HTTPS.
+✔ Make pages mobile friendly.
+✔ Improve loading speed.
+
+-->
+
+<!-- ========================================================= -->
+<!-- Interview Questions -->
+<!-- ========================================================= -->
+
+<!--
+
+Q1. What is SEO?
+Ans: Search Engine Optimization is the process of improving a website's visibility in search engine results.
+
+Q2. Why is the <title> tag important?
+Ans: It appears in browser tabs, bookmarks, and search engine results, making it one of the most important on-page SEO elements.
+
+Q3. What is the purpose of the meta description?
+Ans: It summarizes the page content and is often displayed in search engine result snippets.
+
+Q4. Why is semantic HTML good for SEO?
+Ans: It provides meaningful structure, making content easier for search engines and assistive technologies to understand.
+
+Q5. Why should every image have an alt attribute?
+Ans: It improves accessibility and helps search engines understand image content.
+
+Q6. What is structured data?
+Ans: Machine-readable metadata (usually JSON-LD) that helps search engines understand page content and display rich results.
+
+Q7. What is a canonical URL?
+Ans: It identifies the preferred version of a webpage to prevent duplicate-content issues.
+
+Q8. What does the robots meta tag do?
+Ans: It tells search engines whether to index a page and follow its links.
+
+Q9. What is a sitemap?
+Ans: An XML file listing important pages to help search engines discover and crawl a website.
+
+Q10. What is Open Graph used for?
+Ans: It controls how webpages appear when shared on platforms like Facebook, LinkedIn, and WhatsApp.
+
+Q11. What are Twitter Cards?
+Ans: Metadata that controls how webpages are displayed when shared on X (formerly Twitter).
+
+Q12. Name five important on-page SEO factors.
+Ans: Title, Meta Description, Semantic HTML, Image Alt Text, and Structured Data.
+
+-->

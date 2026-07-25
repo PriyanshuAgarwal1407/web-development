@@ -1,0 +1,593 @@
+<!-- ========================================================= -->
+<!-- HTML ADVANCED TOPICS (2026 Edition) -->
+<!-- PART 20 - PART 24 -->
+<!-- ========================================================= -->
+
+<!--
+This chapter covers:
+
+20. HTML Security
+21. HTML APIs
+22. Progressive Web Apps
+23. HTML Best Practices
+24. Browser Developer Tools
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Advanced HTML Topics</title>
+
+    <!-- ===================================================== -->
+    <!-- Content Security Policy -->
+    <!-- ===================================================== -->
+
+    <meta
+        http-equiv="Content-Security-Policy"
+        content="default-src 'self'">
+
+    <!-- Theme Color -->
+
+    <meta
+        name="theme-color"
+        content="#2563eb">
+
+    <!-- Progressive Web App Manifest -->
+
+    <link
+        rel="manifest"
+        href="manifest.json">
+
+</head>
+<body>
+    <h1>Advanced HTML (2026)</h1>
+    <!-- Secure External Link -->
+    <a
+        href="https://example.com"
+        target="_blank"
+        rel="noopener noreferrer">
+        External Website
+    </a>
+
+    <hr>
+
+    <!-- Secure iframe -->
+
+    <iframe
+        src="https://example.com"
+        sandbox
+        loading="lazy"
+        title="Example">
+    </iframe>
+
+    <hr>
+
+    <!-- Integrity Example -->
+
+    <script
+        src="app.js"
+        integrity="sha384-xxxxxxxx"
+        crossorigin="anonymous">
+    </script>
+</body>
+</html>
+
+<!-- ========================================================= -->
+<!-- PART 20 : HTML SECURITY -->
+<!-- ========================================================= -->
+
+<!-- ========================================================= -->
+<!-- XSS Basics -->
+<!-- ========================================================= -->
+
+<!--
+
+XSS
+
+Cross-Site Scripting
+
+Occurs when malicious JavaScript is injected into webpages.
+
+Prevent By:
+
+✔ Escaping User Input
+✔ Content Security Policy
+✔ Input Validation
+✔ Output Encoding
+
+-->
+
+<!-- ========================================================= -->
+<!-- Escaping -->
+<!-- ========================================================= -->
+
+<!--
+
+Escape special characters.
+
+Examples:
+
+<
+>
+&
+"
+'
+
+Use HTML entities.
+
+Example:
+
+&lt;
+&amp;
+
+-->
+
+<!-- ========================================================= -->
+<!-- Content Security Policy (CSP) -->
+<!-- ========================================================= -->
+
+<!--
+
+Restricts what resources a page may load.
+
+Example: Content-Security-Policy
+
+default-src 'self'
+
+Benefits:
+
+✔ Prevents XSS
+✔ Blocks Untrusted Scripts
+
+-->
+
+<!-- ========================================================= -->
+<!-- iframe sandbox -->
+<!-- ========================================================= -->
+
+<!--
+
+Restricts iframe capabilities.
+
+Example: <iframe sandbox>
+Optional Permissions:
+
+allow-scripts
+allow-forms
+allow-popups
+allow-downloads
+
+-->
+
+<!-- ========================================================= -->
+<!-- noopener -->
+<!-- ========================================================= -->
+
+<!--
+
+Used with: target="_blank"
+Prevents the new page from accessing
+
+window.opener
+Improves security.
+
+-->
+
+<!-- ========================================================= -->
+<!-- noreferrer -->
+<!-- ========================================================= -->
+
+<!--
+
+Prevents: Referer Header from being sent.
+Usually used with: noopener
+
+-->
+
+<!-- ========================================================= -->
+<!-- Integrity Attribute -->
+<!-- ========================================================= -->
+
+<!--
+
+Subresource Integrity (SRI): Verifies downloaded files.
+Example: integrity="sha384-..."
+
+Protects against
+tampered CDN resources.
+
+-->
+
+<!-- ========================================================= -->
+<!-- HTTPS -->
+<!-- ========================================================= -->
+
+<!--
+
+Always use HTTPS.
+
+Benefits:
+
+✔ Encryption
+✔ Security
+✔ Better SEO
+✔ Required for many APIs
+
+-->
+
+<!-- ========================================================= -->
+<!-- PART 21 : HTML APIs -->
+<!-- ========================================================= -->
+
+<!--
+
+Modern browsers expose many APIs.
+
+-->
+
+<!-- ========================================================= -->
+<!-- Geolocation -->
+<!-- ========================================================= -->
+
+<!--
+
+Returns user location.
+
+Requires: HTTPS
+Permission
+
+navigator.geolocation
+
+-->
+
+<!-- ========================================================= -->
+<!-- Drag and Drop -->
+<!-- ========================================================= -->
+
+<!--
+
+Allows dragging elements.
+
+Attributes: draggable="true"
+Events:
+
+dragstart
+dragover
+drop
+
+-->
+
+<!-- ========================================================= -->
+<!-- Clipboard API -->
+<!-- ========================================================= -->
+
+<!--
+
+Read and write clipboard.
+
+Example: navigator.clipboard
+Requires HTTPS.
+
+-->
+
+<!-- ========================================================= -->
+<!-- Fullscreen API -->
+<!-- ========================================================= -->
+
+<!--
+
+Makes an element fullscreen.
+Example: requestFullscreen()
+
+-->
+
+<!-- ========================================================= -->
+<!-- File API -->
+<!-- ========================================================= -->
+
+<!--
+
+Reads selected files.
+
+Used with: <input type="file">
+FileReader
+
+-->
+
+<!-- ========================================================= -->
+<!-- History API -->
+<!-- ========================================================= -->
+
+<!--
+
+Manipulates browser history.
+
+Methods:
+
+pushState()
+replaceState()
+back()
+
+-->
+
+<!-- ========================================================= -->
+<!-- Web Storage -->
+<!-- ========================================================= -->
+
+<!--
+
+localStorage
+Persistent Storage
+
+----------------------------
+
+sessionStorage
+Temporary Storage
+Stores: Key-Value Pairs
+
+-->
+
+<!-- ========================================================= -->
+<!-- Web Share API -->
+<!-- ========================================================= -->
+
+<!--
+
+Shares content using
+native share dialog.
+
+navigator.share()
+
+Requires HTTPS.
+
+-->
+
+<!-- ========================================================= -->
+<!-- Web Speech API -->
+<!-- ========================================================= -->
+
+<!--
+
+Speech Recognition
+
+Speech Synthesis
+
+Voice Commands
+
+Text-to-Speech
+
+-->
+
+<!-- ========================================================= -->
+<!-- PART 22 : PROGRESSIVE WEB APP -->
+<!-- ========================================================= -->
+
+<!--
+
+PWA
+Progressive Web App
+Behaves like a native app.
+
+-->
+
+<!-- ========================================================= -->
+<!-- Manifest -->
+<!-- ========================================================= -->
+
+<!--
+
+manifest.json
+
+Contains:
+
+Name
+Icons
+Theme
+Start URL
+Display Mode
+
+-->
+
+<!-- ========================================================= -->
+<!-- Icons -->
+<!-- ========================================================= -->
+
+<!--
+
+App Icons
+192x192
+512x512
+PNG
+
+-->
+
+<!-- ========================================================= -->
+<!-- Theme Color -->
+<!-- ========================================================= -->
+
+<!--
+
+<meta
+name="theme-color">
+
+Changes browser UI color.
+
+-->
+
+<!-- ========================================================= -->
+<!-- Offline Concepts -->
+<!-- ========================================================= -->
+
+<!--
+
+Service Workers
+Cache API
+Offline Support
+
+-->
+
+<!-- ========================================================= -->
+<!-- Installability -->
+<!-- ========================================================= -->
+
+<!--
+
+Requirements:
+
+HTTPS
+Manifest
+Service Worker
+Icons
+
+-->
+
+<!-- ========================================================= -->
+<!-- PART 23 : HTML BEST PRACTICES -->
+<!-- ========================================================= -->
+
+<!--
+
+✔ Use Semantic HTML.
+✔ One H1 Per Page.
+✔ Proper Heading Order.
+✔ Write Valid HTML.
+✔ Meaningful alt Text.
+✔ Labels For Forms.
+✔ Lowercase Elements.
+✔ Lowercase Attributes.
+✔ Close Elements Properly.
+✔ Use UTF-8.
+✔ Responsive Viewport.
+✔ Use HTTPS.
+✔ Avoid Inline CSS.
+✔ Avoid Inline JavaScript.
+✔ Optimize Images.
+✔ Validate HTML.
+✔ Improve Accessibility.
+
+-->
+
+<!-- ========================================================= -->
+<!-- PART 24 : DEVELOPER TOOLS -->
+<!-- ========================================================= -->
+
+<!--
+
+Inspect Element
+View HTML & CSS.
+
+----------------------------
+
+DOM Tree
+View Page Structure.
+
+----------------------------
+
+Accessibility Inspector
+Accessibility Audit.
+
+----------------------------
+
+Lighthouse
+Performance
+SEO
+Accessibility
+Best Practices
+
+----------------------------
+
+Elements Panel
+Edit HTML & CSS.
+
+----------------------------
+
+Network Panel
+Requests
+Files
+Timing
+
+----------------------------
+
+Device Toolbar
+Responsive Testing.
+
+----------------------------
+
+Performance Panel
+FPS
+Rendering
+Memory
+CPU
+
+-->
+
+<!-- ========================================================= -->
+<!-- Modern HTML Checklist -->
+<!-- ========================================================= -->
+
+<!--
+
+✔ Semantic HTML
+✔ Responsive
+✔ Accessible
+✔ SEO Optimized
+✔ Secure
+✔ HTTPS
+✔ CSP
+✔ Lazy Loading
+✔ Performance
+✔ WebP
+✔ AVIF
+✔ Forms
+✔ Metadata
+✔ PWA Ready
+✔ Valid HTML
+
+-->
+
+<!-- ========================================================= -->
+<!-- Interview Questions -->
+<!-- ========================================================= -->
+
+<!--
+
+Q1. What is XSS?
+Ans: Cross-Site Scripting is an attack where malicious scripts are injected into webpages.
+
+Q2. What is the purpose of Content Security Policy (CSP)?
+Ans: To restrict which resources a webpage can load, reducing the risk of XSS attacks.
+
+Q3. Why should rel="noopener noreferrer" be used with target="_blank"?
+Ans: It prevents the new page from accessing window.opener and hides the referring page information.
+
+Q4. What is the integrity attribute?
+Ans: It enables Subresource Integrity (SRI), ensuring externally loaded files have not been modified.
+
+Q5. Why is HTTPS important?
+Ans: It encrypts communication, improves security, enables many browser APIs, and is a ranking factor for search engines.
+
+Q6. What is localStorage?
+Ans: Persistent browser storage that keeps data even after the browser is closed.
+
+Q7. What is the difference between localStorage and sessionStorage?
+Ans: localStorage persists across sessions, while sessionStorage is cleared when the browser tab is closed.
+
+Q8. What is a Progressive Web App (PWA)?
+Ans: A web application that behaves like a native app using technologies such as a Web App Manifest and Service Workers.
+
+Q9. What is the purpose of a Web App Manifest?
+Ans: It defines metadata such as the app name, icons, theme color, and display mode for installable web apps.
+
+Q10. Which browser tool is used to analyze performance, SEO, accessibility, and best practices?
+Ans: Lighthouse.
+
+Q11. Which DevTools panel helps analyze network requests?
+Ans: The Network Panel.
+
+Q12. Which DevTools feature is used to test responsive layouts?
+Ans: The Device Toolbar.
+
+-->

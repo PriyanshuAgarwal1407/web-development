@@ -1,0 +1,404 @@
+<!-- ========================================================= -->
+<!-- HTML PERFORMANCE (2026 Edition) -->
+<!-- ========================================================= -->
+
+<!--
+Definition:
+
+HTML Performance refers to techniques that improve how quickly
+a webpage loads, renders, and becomes interactive.
+
+Goals:
+
+✔ Faster Loading
+✔ Better User Experience
+✔ Better SEO
+✔ Lower Bandwidth Usage
+✔ Improved Core Web Vitals
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Performance</title>
+    <!-- Preload -->
+
+    <link
+        rel="preload"
+        href="fonts/inter.woff2"
+        as="font"
+        type="font/woff2"
+        crossorigin>
+
+    <!-- Prefetch -->
+
+    <link
+        rel="prefetch"
+        href="about.html">
+
+    <!-- Preconnect -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <!-- DNS Prefetch -->
+
+    <link
+        rel="dns-prefetch"
+        href="//example-cdn.com">
+
+</head>
+<body>
+    <h1>HTML Performance Optimization</h1>
+
+    <!-- Lazy Loading -->
+    <img
+        src="images/photo.jpg"
+        alt="Nature"
+        loading="lazy"
+        width="800"
+        height="500">
+</body>
+</html>
+
+<!-- ========================================================= -->
+<!-- 1. Lazy Loading -->
+<!-- ========================================================= -->
+
+<!--
+
+Purpose: Loads resources only when they are close to the viewport.
+
+Example:
+
+<img
+loading="lazy"
+>
+
+Benefits:
+
+✔ Faster Initial Load
+✔ Saves Bandwidth
+✔ Better Core Web Vitals
+
+Use For:
+
+Images
+Iframes
+
+Do NOT use for hero images.
+
+-->
+
+<!-- ========================================================= -->
+<!-- 2. Preload -->
+<!-- ========================================================= -->
+
+<!--
+
+<link rel="preload">
+
+Purpose: Downloads critical resources early.
+
+Example:
+
+<link
+rel="preload"
+href="font.woff2"
+as="font">
+
+Use For:
+
+✔ Fonts
+✔ Hero Images
+✔ CSS
+✔ Important Scripts
+
+-->
+
+<!-- ========================================================= -->
+<!-- 3. Prefetch -->
+<!-- ========================================================= -->
+
+<!--
+
+<link rel="prefetch">
+
+Purpose: Downloads resources that may be needed later.
+
+Example:
+
+<link
+rel="prefetch"
+href="about.html">
+
+Best For:
+Next Page Navigation
+Future Resources
+
+-->
+
+<!-- ========================================================= -->
+<!-- 4. Preconnect -->
+<!-- ========================================================= -->
+
+<!--
+
+<link rel="preconnect">
+
+Purpose: Establishes early connections to another origin.
+
+Example:
+
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com">
+
+Benefits:
+
+✔ Faster DNS
+✔ Faster TLS
+✔ Lower Latency
+
+-->
+
+<!-- ========================================================= -->
+<!-- 5. DNS Prefetch -->
+<!-- ========================================================= -->
+
+<!--
+
+<link rel="dns-prefetch">
+
+Purpose: Resolves domain names before resources are requested.
+
+Example:
+
+<link
+rel="dns-prefetch"
+href="//cdn.example.com">
+
+Useful for: Third-party Resources
+
+-->
+
+<!-- ========================================================= -->
+<!-- 6. Compression -->
+<!-- ========================================================= -->
+
+<!--
+
+Compression reduces file size before transfer.
+
+Common Algorithms:
+
+Gzip
+Brotli (Recommended)
+
+Benefits:
+
+✔ Faster Downloads
+✔ Lower Bandwidth
+
+Usually enabled on the server, not in HTML.
+
+-->
+
+<!-- ========================================================= -->
+<!-- 7. Critical Rendering -->
+<!-- ========================================================= -->
+
+<!--
+
+Critical Rendering Path
+
+Browser Process:
+
+HTML
+↓
+DOM
+↓
+CSSOM
+↓
+Render Tree
+↓
+Layout
+↓
+Paint
+↓
+
+Composite
+
+Optimization:
+
+✔ Minimize CSS
+✔ Defer JavaScript
+✔ Inline Critical CSS
+✔ Reduce Render Blocking
+
+-->
+
+<!-- ========================================================= -->
+<!-- 8. Image Optimization -->
+<!-- ========================================================= -->
+
+<!--
+
+Best Practices:
+
+✔ Use AVIF
+✔ Use WebP
+✔ Compress Images
+✔ Responsive Images
+✔ width & height
+✔ loading="lazy"
+✔ srcset
+✔ sizes
+
+Avoid oversized images.
+
+-->
+
+<!-- ========================================================= -->
+<!-- 9. Resource Hints -->
+<!-- ========================================================= -->
+
+<!--
+
+Resource Hints
+Help browsers prepare resources.
+
+Types:
+
+preload
+prefetch
+preconnect
+dns-prefetch
+modulepreload
+
+Example:
+
+<link
+rel="modulepreload"
+href="app.js">
+
+-->
+
+<!-- ========================================================= -->
+<!-- Core Web Vitals -->
+<!-- ========================================================= -->
+
+<!--
+
+Largest Contentful Paint (LCP)
+
+Measures loading speed.
+Good: ≤ 2.5 seconds
+
+----------------------------
+
+Interaction to Next Paint (INP)
+
+Measures responsiveness.
+Good: ≤ 200 ms
+
+----------------------------
+
+Cumulative Layout Shift (CLS)
+
+Measures visual stability.
+Good: ≤ 0.1
+
+-->
+
+<!-- ========================================================= -->
+<!-- Performance Checklist -->
+<!-- ========================================================= -->
+
+<!--
+
+✔ Lazy Load Images
+✔ Optimize Images
+✔ Compress Files
+✔ Minify CSS
+✔ Minify JavaScript
+✔ Preload Fonts
+✔ Use WebP / AVIF
+✔ Reduce HTTP Requests
+✔ Enable Caching
+✔ Use CDN
+✔ Async / Defer Scripts
+✔ Resource Hints
+
+-->
+
+<!-- ========================================================= -->
+<!-- Best Practices -->
+<!-- ========================================================= -->
+
+<!--
+
+✔ Use lazy loading for below-the-fold images.
+✔ Preload critical assets only.
+✔ Prefetch likely future pages.
+✔ Preconnect to important third-party domains.
+✔ Enable Brotli compression.
+✔ Serve responsive images.
+✔ Always specify image dimensions.
+✔ Remove unused CSS and JavaScript.
+✔ Avoid render-blocking resources.
+✔ Measure performance using Core Web Vitals.
+
+-->
+
+<!-- ========================================================= -->
+<!-- Interview Questions -->
+<!-- ========================================================= -->
+
+<!--
+
+Q1. What is lazy loading?
+Ans: A technique that delays loading images or iframes until they are near the viewport.
+
+Q2. What is the purpose of rel="preload"?
+Ans: It tells the browser to fetch critical resources early.
+
+Q3. What is the difference between preload and prefetch?
+Ans: Preload is for resources needed on the current page, while prefetch is for resources likely needed on future pages.
+
+Q4. What does rel="preconnect" do?
+Ans: It establishes an early network connection to another origin, reducing latency.
+
+Q5. What is DNS Prefetch?
+Ans: A resource hint that resolves domain names before the browser requests resources from them.
+
+Q6. Which compression algorithms are commonly used for web assets?
+Ans: Gzip and Brotli (recommended).
+
+Q7. What is the Critical Rendering Path?
+Ans: The sequence the browser follows to convert HTML, CSS, and JavaScript into pixels on the screen.
+
+Q8. Which image formats are recommended for modern websites?
+Ans: AVIF and WebP, with JPEG/PNG as fallbacks.
+
+Q9. What are Resource Hints?
+Ans: HTML link relations like preload, prefetch, preconnect, dns-prefetch, and modulepreload that help the browser optimize resource loading.
+
+Q10. What are the three Core Web Vitals?
+Ans: Largest Contentful Paint (LCP), Interaction to Next Paint (INP), and Cumulative Layout Shift (CLS).
+
+Q11. Why should width and height be specified for images?
+Ans: To reserve layout space and reduce Cumulative Layout Shift (CLS).
+
+Q12. Is compression configured in HTML?
+Ans: No. Compression such as Brotli or Gzip is typically configured on the web server.
+
+-->
