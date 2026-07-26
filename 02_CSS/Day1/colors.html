@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors in CSS</title>
+</head>
+<body>
+    <h1>Color in CSS</h1>
+    <p>Every color you see on a screen is created by mixing three primary colors of light: Red, Green, and Blue (RGB). Every single pixel on your screen is made up of tiny red, green, and blue sub-pixels that can be turned on or off at different intensities.</p>
+    
+    <h2>Solution 1: Color Keywords (The "Human-Friendly" Names)</h2>
+    <p style="color: red;">This is a red paragraph.</p>
+    <p style="color: green;">This is a green paragraph.</p>
+    <p style="color: blue;">This is a blue paragraph.</p>
+
+    <h2>Solution 2: Hexadecimal(HEX) Color Codes (The "Web Standard")</h2>
+    <!-- The Syntax: A hash symbol (#) followed by six characters (RRGGBB). -->
+    <p style="color: #FF5733;">This is a paragraph with a hexadecimal color code.</p>
+    <p style="color: #33FF57;">This is another paragraph with a different hexadecimal color code.</p>
+    <!-- If all three pairs of digits are the same (e.g., #FF00CC), you can use a three-digit shorthand (#F0C). #333 is the same as #333333. -->
+
+    <h2>Solution 3: RGB() and RGBA() (The "More Readable" and "Transparent" Way)</h2>
+    <!-- Red, Green, Blue, Alpha -->
+    <p style="color: rgb(255, 87, 51);">This is a paragraph with an RGB color code.</p>
+    <p style="color: rgba(51, 255, 87, 0.8);">This is a paragraph with an RGBA color code.</p>
+    <p style="color: rgba(51, 255, 87, 0.4);">This is a paragraph with a transparent RGBA color code.</p>
+
+    <h2>Solution 4: HSL() and HSLA() (The "Hue, Saturation, Lightness" Way)</h2>
+    <!-- Hue means the color itself (0-360 degrees), Saturation means the intensity of the color (0-100%), and Lightness means how light or dark the color is (0-100%) -->
+    <p style="color: hsl(9, 100%, 60%);">This is a paragraph with an HSL color code.</p>
+    <p style="color: hsla(120, 100%, 50%, 0.8);">This is a paragraph with an HSLA color code.</p>
+    <p style="color: hsla(120, 100%, 50%, 0.4);">This is a paragraph with a transparent HSLA color code.</p>
+</body>
+</html>

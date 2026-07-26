@@ -1,0 +1,12 @@
+/* External CSS */
+/* This CSS file is linked to the external.html file */
+
+h1 {
+    color: green; /* Sets the text color to green */
+    background-color: lightgray; /* Sets the background color to light gray */
+}
+
+h2 {
+    color: blue; /* Sets the text color to blue */
+    background-color: lightyellow; /* Sets the background color to light yellow */
+}

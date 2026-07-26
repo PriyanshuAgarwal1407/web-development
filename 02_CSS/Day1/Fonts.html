@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Lobster&family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('fonts/CustomFont.woff2') format('woff2'),
+                 url('fonts/CustomFont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Google Fonts</h1>
+    <p>Google Fonts is a library of free and open-source fonts that can be easily integrated into web projects. It provides a wide variety of font styles and weights, allowing designers to enhance the typography of their websites. By using Google Fonts, developers can improve the visual appeal and readability of their web pages without the need to host font files locally.</p>
+
+    <h2>Solution 1: Using Google Fonts</h2>
+    <p>To use Google Fonts in your web project, you can follow these steps:</p>
+    <ol>
+        <li>Visit the <a href="https://fonts.google.com/" target="_blank">Google Fonts website</a>.</li>
+        <li>Browse and select the font you want to use.</li>
+        <li>Click on the font to view its details and select the styles you want to include.</li>
+        <li>Copy the provided <code>&lt;link&gt;</code> tag and paste it into the <code>&lt;head&gt;</code> section of your HTML document.</li>
+        <li>Use the font in your CSS by specifying the font-family property with the selected font name.</li>
+    </ol>
+
+    <h2>Example</h2>
+    <p style="font-family: 'Roboto', sans-serif;">This paragraph uses the Roboto font from Google Fonts.</p>
+    <p style="font-family: 'Lobster', cursive;">This paragraph uses the Lobster font from Google Fonts.</p>
+    <p style="font-family: 'Open Sans', sans-serif;">This paragraph uses the Open Sans font from Google Fonts.</p>
+
+    <h1>Solution 2: Using @font-face</h1>
+    <p>The @font-face rule in CSS allows you to define custom fonts that can be used in your web project. This method enables you to host font files on your server and specify them in your CSS, giving you more control over the fonts used on your website. By using @font-face, you can ensure that your chosen fonts are displayed consistently across different browsers and devices, even if the user does not have those fonts installed on their system.</p>
+    <p style="font-family: 'CustomFont', sans-serif;">This paragraph uses a custom font defined using the @font-face rule. If the custom font is not available, it will fall back to any available sans-serif font.</p>
+</body>
+</html>
+
+
+<!--  Use Google Fonts or @font-face for custom fonts. -->

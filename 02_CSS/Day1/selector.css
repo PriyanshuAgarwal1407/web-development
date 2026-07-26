@@ -1,0 +1,47 @@
+/* Tag Element (Type) Selector */
+/* This selector targets elements based on their tag name. */
+
+h1 {
+    color: red;
+    font-size: 35px;
+}
+
+ul {
+    background-color: lightblue;
+}
+
+/* ID Selector - Hash based selection */
+/* An Id is always unique, so it is used to style a specific element with a unique identifier. */
+
+#unique {
+    color: purple;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+/* Class Selector - Dot based selection */
+/* A class can be used on multiple elements, so it is used to style a group of elements with the same class name. */
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Group Selector */
+/* A group selector allows you to apply the same styles to multiple elements by separating them with a comma. */
+
+h2, h3, p {
+    color: green;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Universal Selector */
+/* The universal selector targets all elements on the page. */
+
+* {
+    margin: 5px;
+    padding: 2px;
+    box-sizing: border-box;
+}

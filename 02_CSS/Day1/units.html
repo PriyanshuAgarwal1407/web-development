@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units in CSS</title>
+</head>
+<body>
+    <h1>Units in CSS</h1>
+    <p>In CSS, units are used to define the size and dimensions of elements. There are various types of units available, including absolute units, relative units, and percentage-based units.</p>
+
+    <h2>Solution 1: Absolute Units</h2>
+    <p style="width: 200px; height: 100px; background-color: lightblue;">This div has a width of 200 pixels and a height of 100 pixels.</p>
+    <p style="width: 5in; height: 2in; background-color: lightgreen;">This div has a width of 5 inches and a height of 2 inches.</p>
+    <p style="width: 10cm; height: 5cm; background-color: lightcoral;">This div has a width of 10 centimeters and a height of 5 centimeters.</p>
+
+    <h2>Solution 2: Relative Units</h2>
+    <p style="width: 50%; height: 50%; background-color: lightyellow;">This div has a width and height of 50% of its parent element.</p>
+    <p style="width: 10em; height: 5em; background-color: lightpink;">This div has a width of 10 em and a height of 5 em.</p>
+    <p style="width: 20rem; height: 10rem; background-color: lightgray;">This div has a width of 20 rem and a height of 10 rem.</p>
+
+    <h2>Solution 3: Viewport Units</h2>
+    <p style="width: 50vw; height: 50vh; background-color: lightseagreen;">This div has a width of 50% of the viewport width and a height of 50% of the viewport height.</p>
+    <p style="width: 100vw; height: 100vh; background-color: lightsteelblue;">This div has a width of 100% of the viewport width and a height of 100% of the viewport height.</p>
+    <p style="width: 10vmin; height: 10vmax; background-color: lightgoldenrodyellow;">This div has a width of 10 vmin and a height of 10 vmax.</p>
+</body>
+</html>
+
+
+<!-- 
+px(pixels) - Absolute unit, commonly used for defining sizes in web design.
+in (inches) - Absolute unit, used for print media.
+cm (centimeters) - Absolute unit, used for print media.
+mm (millimeters) - Absolute unit, used for print media.
+
+% - Percentage unit, relative to the parent element's size.
+em - Relative unit, based on the font size of the parent element. 1em equals the current font size.
+rem - Relative unit, based on the font size of the root element.
+
+vw (viewport width) - Relative unit, based on the width of the viewport. 1vw equals 1% of the viewport width.
+vh (viewport height) - Relative unit, based on the height of the viewport. 1vh equals 1% of the viewport height.
+vmin - Relative unit, based on the smaller dimension of the viewport (width or height).
+vmax - Relative unit, based on the larger dimension of the viewport (width or height). 
+
+pt (points) - Absolute unit, commonly used in print media. 1pt equals 1/72 of an inch.
+pc (picas) - Absolute unit, commonly used in print media. 1pc equals 12 points.
+-->

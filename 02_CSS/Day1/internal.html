@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal CSS</title>
+
+    <!-- Internal CSS -->
+    <style>
+        h1{
+            color: red; /* Sets the text color to a red */
+            background-color: blue; /* Sets the background color to a blue */
+        }
+
+        h2{
+            background-color: antiquewhite; /* Sets the background color to a light shade of brown */
+        }
+        h1{
+            color: orange; /* This has more specificity than the previous rule, so it will override the previous color setting.
+            "Cascading" in CSS means: when multiple rules target the same element and property, the browser must decide which one wins. 
+            */
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 >Gym Website</h1>
+
+    <h2>Exercise </h2>
+    <ul>
+        <li>Biceps</li>
+        <li>Legs</li>
+        <li>Chest</li>
+        <li>Shoulder</li>
+        <li>Triceps</li>
+        <li>Back</li>
+    </ul>
+
+    <h2>Diet</h2>
+
+    <ul>
+        <li>Veg:
+            <ol>
+                <li>Paneer</li>
+                <li>Soya</li>
+                <li>Tofu</li>
+            </ol>
+        </li>
+        <li>Non Veg:
+            <ol>
+                <li>Chicken</li>
+                <li>Egg</li>
+                <li>Mutton</li>
+            </ol>
+        </li>
+    </ul>
+
+
+</body>
+</html>
