@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Title -->
+    <title>CSS Positioning</title>
+
+    <!-- External CSS File -->
+    <link rel="stylesheet" href="styler.css">
+</head>
+<body>
+
+    <header>
+        <h1>CSS Positioning</h1>
+        <p>
+            CSS positioning determines how elements are placed within a webpage.
+            It controls an element's location relative to the document, its parent,
+            or the browser viewport. Understanding positioning is essential for
+            building modern and responsive layouts.
+        </p>
+    </header>
+
+    <main>
+
+        <!-- Position Types -->
+        <section>
+            <h2>Types of CSS Positioning</h2>
+
+            <ul>
+                <li>
+                    <strong>Static</strong> – The default positioning method.
+                    Elements follow the normal document flow, and properties like
+                    <code>top</code>, <code>right</code>, <code>bottom</code>, and
+                    <code>left</code> have no effect.
+                </li>
+
+                <li>
+                    <strong>Relative</strong> – Moves an element relative to its
+                    original position while keeping its original space reserved in
+                    the document layout.
+                </li>
+
+                <li>
+                    <strong>Absolute</strong> – Removes an element from the normal
+                    document flow and positions it relative to its nearest ancestor
+                    with a positioning value other than <code>static</code>. If no
+                    such ancestor exists, it is positioned relative to the initial
+                    containing block (the page).
+                </li>
+
+                <li>
+                    <strong>Fixed</strong> – Removes an element from the normal
+                    document flow and positions it relative to the browser viewport.
+                    The element remains in the same position even while scrolling.
+                </li>
+
+                <li>
+                    <strong>Sticky</strong> – Behaves like a relatively positioned
+                    element until it reaches a specified scroll position, after which
+                    it behaves like a fixed element within its parent container.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Sticky Position Example -->
+        <section>
+            <h3>Sticky Position Example</h3>
+
+            <p>
+                This heading uses <code>position: sticky</code>. Scroll down the page
+                and notice that once the heading reaches the top of the viewport, it
+                remains fixed there until its parent section ends.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                dignissim, sapien non facilisis malesuada, nulla lacus convallis
+                libero, vitae luctus mauris ipsum vitae augue. Integer feugiat
+                bibendum risus, sed vulputate lectus posuere non. Curabitur
+                ullamcorper, neque eget vulputate interdum, nisl justo feugiat
+                turpis, vitae luctus sapien risus nec nulla.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                facilisi. Suspendisse potenti. Cras dictum, mauris vel elementum
+                faucibus, mauris ligula pretium augue, sed pulvinar neque lorem sed
+                lectus. Vestibulum ante ipsum primis in faucibus orci luctus et
+                ultrices posuere cubilia curae.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                commodo, magna non laoreet faucibus, arcu libero dignissim mauris,
+                eget feugiat augue elit sed erat. Pellentesque habitant morbi
+                tristique senectus et netus et malesuada fames ac turpis egestas.
+            </p>
+        </section>
+
+        <!-- Absolute Position Example -->
+        <section>
+            <h4>Absolute Position Example</h4>
+
+            <p>
+                This heading uses <code>position: absolute</code>. Since no parent
+                element has a positioning context (such as
+                <code>position: relative</code>), it is positioned relative to the
+                initial containing block (the page).
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                feugiat velit nec lorem tristique, ac faucibus massa vulputate.
+                Aliquam erat volutpat. Duis at augue non sapien malesuada maximus.
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                posuere cubilia curae.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus,
+                lorem non pellentesque luctus, orci risus tincidunt nisi, nec
+                elementum nunc orci nec lorem. Curabitur luctus tortor vitae
+                tincidunt gravida. Integer non urna nec justo feugiat viverra.
+            </p>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

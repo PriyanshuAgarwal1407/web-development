@@ -1,0 +1,330 @@
+/* Reset default browser spacing */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General page styling */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    padding: 20px;
+}
+
+/* Give all sections some spacing */
+section{
+    margin-bottom: 50px;
+}
+
+/* Style headings */
+h1,
+h2,
+h3,
+h4{
+    margin-bottom: 15px;
+}
+
+/* Style paragraphs */
+p{
+    margin-bottom: 15px;
+}
+
+/* ==========================================
+   1. Static Position (Default)
+   ========================================== */
+
+/*
+Every HTML element uses position: static by default.
+
+Characteristics:
+- Follows the normal document flow.
+- top, right, bottom, and left do NOT work.
+- Space is reserved in the layout.
+*/
+
+h2{
+    background-color: lightblue;
+
+    /* Default value */
+    position: static;
+}
+
+
+/* ==========================================
+   2. Relative Position
+   ========================================== */
+
+/*
+Relative positioning moves an element
+relative to its original position.
+
+Characteristics:
+✔ Remains in the normal document flow.
+✔ Original space is still reserved.
+✔ Other elements do not move into its place.
+*/
+
+.relative-box{
+
+    width: 250px;
+    padding: 15px;
+
+    background-color: #FFD54F;
+    border: 2px solid #333;
+
+    position: relative;
+
+    /* Move from its original position */
+    left: 30px;
+    top: 15px;
+}
+
+
+/* ==========================================
+   3. Absolute Position
+   ========================================== */
+
+/*
+Absolute positioning removes an element
+from the normal document flow.
+
+It is positioned relative to the nearest
+ancestor whose position is:
+- relative
+- absolute
+- fixed
+- sticky
+
+If no positioned ancestor exists,
+it is positioned relative to the page.
+*/
+
+h4{
+
+    background-color: aqua;
+
+    position: absolute;
+
+    top: 100px;
+    left: 50px;
+
+    padding: 10px;
+}
+
+
+/* ==========================================
+   Absolute Position with Parent
+   ========================================== */
+
+/*
+The parent creates a positioning context.
+*/
+
+.container{
+
+    position: relative;
+
+    height: 220px;
+
+    margin-top: 30px;
+
+    border: 3px solid black;
+}
+
+/*
+Now this element is positioned
+inside .container instead of the page.
+*/
+
+.absolute-box{
+
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    width: 150px;
+
+    padding: 10px;
+
+    background-color: tomato;
+}
+
+
+/* ==========================================
+   4. Fixed Position
+   ========================================== */
+
+/*
+Fixed positioning removes the element
+from the normal document flow.
+
+Characteristics:
+✔ Positioned relative to the viewport.
+✔ Always stays at the same place.
+✔ Remains visible while scrolling.
+✔ Does NOT reserve its original space.
+*/
+
+/*
+.fixed-box{
+
+    position: fixed;
+
+    bottom: 20px;
+    right: 20px;
+
+    background-color: red;
+    color: white;
+
+    padding: 15px;
+}
+*/
+
+
+/* ==========================================
+   5. Sticky Position
+   ========================================== */
+
+/*
+Sticky behaves like relative positioning
+until the element reaches the specified
+scroll position.
+
+After reaching that point,
+it behaves like fixed positioning.
+
+It only sticks inside its parent container.
+*/
+
+h3{
+
+    background-color: lightgreen;
+
+    position: sticky;
+
+    top: 0;
+
+    padding: 10px;
+}
+
+
+/* ==========================================
+   Z-Index
+   ========================================== */
+
+/*
+The z-index property controls the stacking
+order of overlapping positioned elements.
+
+Rules:
+✔ Higher z-index appears on top.
+✔ Lower z-index appears underneath.
+✔ Works only on positioned elements
+   (relative, absolute, fixed, sticky).
+*/
+
+/* Parent for demonstration */
+
+.z-index-container{
+
+    position: relative;
+
+    width: 350px;
+    height: 250px;
+
+    margin-top: 40px;
+
+    border: 2px solid black;
+}
+
+/* First Box */
+
+.box1{
+
+    position: absolute;
+
+    top: 30px;
+    left: 30px;
+
+    width: 150px;
+    height: 150px;
+
+    background-color: crimson;
+
+    color: white;
+
+    padding: 10px;
+
+    z-index: 1;
+}
+
+/* Second Box */
+
+.box2{
+
+    position: absolute;
+
+    top: 70px;
+    left: 90px;
+
+    width: 150px;
+    height: 150px;
+
+    background-color: royalblue;
+
+    color: white;
+
+    padding: 10px;
+
+    z-index: 2;
+}
+
+/*
+Since:
+
+box2 -> z-index: 2
+box1 -> z-index: 1
+
+box2 will appear above box1.
+*/
+
+
+/* ==========================================
+   Notes
+   ========================================== */
+
+/*
+Position Summary
+
+1. static
+   - Default position
+   - Normal document flow
+   - Space reserved
+
+2. relative
+   - Moves from original position
+   - Space reserved
+
+3. absolute
+   - Removed from normal flow
+   - Positioned relative to nearest positioned ancestor
+   - No space reserved
+
+4. fixed
+   - Removed from normal flow
+   - Positioned relative to viewport
+   - Stays while scrolling
+   - No space reserved
+
+5. sticky
+   - Starts as relative
+   - Becomes fixed during scrolling
+   - Sticks only within its parent container
+
+6. z-index
+   - Controls stacking order
+   - Higher value appears on top
+   - Works on positioned elements
+*/

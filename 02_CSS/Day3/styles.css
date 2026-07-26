@@ -1,0 +1,27 @@
+h1{
+    background-color: pink;
+}
+
+/* .highlight{
+    background-color: yellow;
+}
+
+#main-title{
+    background-color: lightgreen;
+}    */
+
+/* Priority: Inline > ID > Class > Element(Tag) */
+
+
+h1{
+    background-color: lightblue;
+}
+/* Ordering is important the last style defined will take precedence */
+
+
+#para{
+    /* background-color: lightyellow; */
+
+    /* To override the inline style */
+    background-color: orange !important;
+}
