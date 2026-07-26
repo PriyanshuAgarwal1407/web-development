@@ -1,0 +1,63 @@
+/* Sweden Flag Styles */
+/*
+Flag Dimensions
+Width  : 300px
+Height : 200px
+
+Layout:
+-------------------------
+|      Blue (50px)      |
+-------------------------
+|                       |
+|      Yellow Cross     |
+|                       |
+-------------------------
+
+*/
+
+#flag{
+    width: 320px;
+    height: 200px;
+    background-color: #005293;
+    position: relative;
+}
+
+#vertical{
+    width: 40px;
+    height: 200px;
+    background-color: #FECB00;
+    position: absolute;
+    left: 90px;
+}
+
+#horizontal{
+    width: 320px;
+    height: 40px;
+    background-color: #FECB00;
+    position: absolute;
+    top: 80px;
+}
+
+/*
+==========================================
+Sweden Flag
+==========================================
+
+Flag Background
+- Blue rectangle represents the flag.
+- position: relative creates a positioning context.
+
+Vertical Stripe
+- Yellow rectangle.
+- position: absolute removes it from normal flow.
+- left: 90px moves it from the left edge.
+
+Horizontal Stripe
+- Yellow rectangle.
+- position: absolute removes it from normal flow.
+- top: 80px moves it from the top edge.
+
+Result
+- Vertical and horizontal stripes overlap.
+- Together they form the Nordic Cross.
+*/

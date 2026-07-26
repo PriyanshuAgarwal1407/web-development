@@ -1,0 +1,86 @@
+/* Laos Flag Styles */
+/*
+Flag Dimensions
+Width  : 300px
+Height : 200px
+
+Layout:
+-------------------------
+|       Red (50px)      |
+-------------------------
+|                       |
+|      Blue (100px)     |
+|     White Circle      |
+|                       |
+-------------------------
+|      Red (50px)       |
+-------------------------
+*/
+
+#flag{
+    width: 300px;
+    height: 200px;
+
+    /* Blue background forms the middle stripe */
+    background-color: #002868;
+
+    /* Creates a positioning context for child elements */
+    position: relative;
+}
+
+/*
+The circle is centered inside the flag.
+
+Horizontal Center: (300px - 100px) / 2 = 100px
+Vertical Center: (200px - 100px) / 2 = 50px
+*/
+#circle{
+    width: 100px;
+    height: 100px;
+
+    background-color: white;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    left: 100px;
+    top: 50px;
+}
+
+/*
+Alternative (Recommended)
+
+Instead of calculating left and top manually,
+the circle can be perfectly centered using:
+
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+
+This method works even if the flag size changes.
+*/
+
+#top-red{
+    width: 100%;
+    height: 50px;
+
+    background-color: #D21034;
+
+    position: absolute;
+    top: 0;
+}
+
+#bottom-red{
+    width: 100%;
+    height: 50px;
+
+    background-color: #D21034;
+
+    position: absolute;
+    bottom: 0;
+}
+
+/* Position is absolute because to position the circle within the flag */
+/* left is 100px because the flag is 300px wide and the circle is 100px wide, so (300-100)/2 = 100 */
+/* top is 50px because the flag is 200px high and the circle is 100px high, so (200-100)/2 = 50 */

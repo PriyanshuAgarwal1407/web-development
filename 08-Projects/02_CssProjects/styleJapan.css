@@ -1,0 +1,20 @@
+#flag{
+    height: 200px;
+    width: 300px;
+    background-color: white;
+    position: relative;
+}
+
+#circle{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    left: 100px;
+    top: 50px;
+}
+
+/* Position is absolute because to position the circle within the flag */
+/* left is 100px because the flag is 300px wide and the circle is 100px wide, so (300-100)/2 = 100 */
+/* top is 50px because the flag is 200px high and the circle is 100px high, so (200-100)/2 = 50 */
