@@ -1,0 +1,145 @@
+/* Reset default browser spacing */
+/*
+*{
+    margin: 0;
+    padding: 0;
+}
+*/
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 30px;
+    line-height: 1.6;
+}
+
+h1{
+    text-align: center;
+    background-color: aqua;
+    padding: 20px;
+
+    height: 100px;
+    width: 500px;
+
+    box-sizing: border-box;
+    /* It controls how the total width and height of an element is calculated */
+}
+
+h2{
+    background-color: #ffe66d;
+    padding: 10px;
+
+    display: inline-block;
+}
+
+hr{
+    margin: 35px 0;
+}
+
+/* ===========================
+   Block Elements
+=========================== */
+
+.box{
+    background-color: lightgreen;
+    border: 2px solid green;
+    padding: 15px;
+    margin: 10px 0;
+
+    width: 300px;
+}
+
+/* ===========================
+   Inline Elements
+=========================== */
+
+.inline{
+    background-color: lightcoral;
+    color: white;
+
+    width: 200px;
+    height: 80px;
+    /* No effect of height and width on inline elements */
+
+    padding: 15px;
+    margin: 20px;
+    /* Margin and padding have effect on inline elements only in horizontal direction */
+}
+
+/* ===========================
+   Inline Block
+=========================== */
+
+.inline-block{
+    display: inline-block;
+
+    background-color: skyblue;
+    border: 2px solid steelblue;
+
+    width: 150px;
+    height: 100px;
+
+    margin: 10px;
+    padding: 15px;
+
+    text-align: center;
+}
+
+/* ===========================
+   Block -> Inline
+=========================== */
+
+.change-inline{
+    display: inline;
+
+    background-color: pink;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* ===========================
+   Inline -> Block
+=========================== */
+
+.change-block{
+    display: block;
+
+    background-color: plum;
+
+    width: 250px;
+
+    margin: 10px 0;
+    padding: 10px;
+}
+
+/* ===========================
+   Box Sizing
+=========================== */
+
+.content-box{
+    width: 250px;
+    height: 120px;
+
+    padding: 20px;
+    border: 5px solid red;
+
+    background-color: #ffd6d6;
+
+    box-sizing: content-box; 
+    /* It does not include padding and border in height and width of the element */
+
+    margin-bottom: 20px;
+}
+
+.border-box{
+    width: 250px;
+    height: 120px;
+
+    padding: 20px;
+    border: 5px solid blue;
+
+    background-color: #d6f5ff;
+
+    box-sizing: border-box;
+    /* It includes padding and border in height and width of the element */
+    /* It is the default value of the box-sizing property. It is used as main because it makes the element's dimensions more predictable */
+}

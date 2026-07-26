@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline, Block & Inline-Block</title>
+    <link rel="stylesheet" href="inlineBlock.css">
+</head>
+<body>
+
+    <h1>Inline, Block & Inline-Block Elements</h1>
+
+    <hr>
+
+    <h2>1. Block Elements</h2>
+
+    <p>
+        Block elements always start on a new line and take the full available
+        width by default.
+    </p>
+
+    <div class="box">
+        I am a div (Block Element)
+    </div>
+
+    <div class="box">
+        I also start on a new line.
+    </div>
+
+    <hr>
+
+    <h2>2. Inline Elements</h2>
+
+    <p>
+        Inline elements stay on the same line and only occupy the space
+        required by their content.
+    </p>
+
+    <span class="inline">HTML</span>
+    <span class="inline">CSS</span>
+    <span class="inline">JavaScript</span>
+
+    <p>
+        Width and height are ignored on normal inline elements.
+    </p>
+
+    <hr>
+
+    <h2>3. Inline-Block Elements</h2>
+
+    <p>
+        Inline-block elements stay on the same line like inline elements,
+        but width and height also work.
+    </p>
+
+    <div class="inline-block">Card 1</div>
+    <div class="inline-block">Card 2</div>
+    <div class="inline-block">Card 3</div>
+
+    <hr>
+
+    <h2>4. display Property</h2>
+
+    <h3>Block → Inline</h3>
+
+    <div class="change-inline">
+        First Block
+    </div>
+
+    <div class="change-inline">
+        Second Block
+    </div>
+
+    <p>
+        Both divs are displayed on the same line because of
+        <code>display: inline;</code>
+    </p>
+
+    <hr>
+
+    <h3>Inline → Block</h3>
+
+    <span class="change-block">HTML</span>
+    <span class="change-block">CSS</span>
+    <span class="change-block">JavaScript</span>
+
+    <p>
+        These span elements now behave like block elements.
+    </p>
+
+    <hr>
+
+    <h2>5. Box Sizing</h2>
+
+    <div class="content-box">
+        content-box
+    </div>
+
+    <div class="border-box">
+        border-box
+    </div>
+
+</body>
+</html>

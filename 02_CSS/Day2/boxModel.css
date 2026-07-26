@@ -1,0 +1,62 @@
+
+h1{
+    background-color: orange;
+    height: 200px;
+    width: 200px; 
+    /* Height and width applicaple on content */
+
+
+    /* Border Properties */
+    border-width: 10px;        /* Thickness of the border */
+    border-style: solid;       /* Style of the border */
+    border-color: black;     /* Color of the border */
+
+    /* Shorthand for border properties */
+    /* border: 10px solid black;  */
+     
+    
+    /* Padding Properties */
+    padding: 20px;               /* Space between content and border */
+
+    /* Margin Properties */
+    margin: 20px;                /* Space between border and other elements */
+
+    /* Border radius: It is the radius of the border corners. */
+    border-radius: 20px;
+}
+
+
+h2{
+    background-color: pink;
+    border: 10px solid blue;
+
+    /* padding-top: 10px;
+    padding-right: 500px;
+    padding-bottom: 40px;
+    padding-left: 60px; */
+
+    /* Shorthand for padding and margin properties */
+    /* padding: top right bottom left */
+    /* margin: top right bottom left */
+    padding: 10px 500px 40px 60px; 
+    margin: 50px 100px 20px 10px;
+}
+
+
+p{
+    background-color: lightgreen;
+    padding: 20px;
+    /* border: 10px solid red; */
+
+
+    margin: 50px;
+
+    /* Shorthand for border properties */
+    /* border: top right bottom left */
+    /* border: 10px 20px 30px 40px; */
+
+    border-right: 10px solid red;
+    border-bottom: 10px solid green;
+    border-left: 10px solid blue;
+    border-top: 10px solid yellow;
+}
