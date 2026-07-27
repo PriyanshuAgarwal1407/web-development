@@ -1,0 +1,73 @@
+.flex-container {
+    background-color: lightgrey;
+    display: flex;
+    height: 600px;
+
+    /* flex-direction: row; (default) */
+    /* flex-direction: column; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+
+    /* Main axis is determined by flex-direction.
+       Cross axis is always perpendicular to the main axis. */
+
+    /* justify-content aligns items along the main axis */
+    justify-content: center;
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+
+    /* align-items aligns items along the cross axis */
+    align-items: center;
+    /* align-items: stretch; */
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+
+    /* Allows items to move onto a new line when there isn't enough space */
+    /* flex-wrap: wrap; */
+
+    gap: 10px;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+}
+
+.first {
+    background-color: red;
+
+    /* Initial size of the flex item along the main axis.
+       It takes priority over width (for row) or height (for column). */
+    /* flex-basis: 200px; */
+
+    /* flex-grow: 1; */
+    /* Allows this item to grow and take available free space. */
+}
+
+.second {
+    background-color: blue;
+
+    /* Shrinks this item 4× faster than items with flex-shrink: 1
+       when there isn't enough space. */
+    /* flex-shrink: 4; */
+
+    /* flex-grow: 2; */
+
+    /* Flex shorthand property */
+    flex: 1 1 200px;
+    /* flex: flex-grow | flex-shrink | flex-basis */
+}
+
+.third {
+    background-color: green;
+
+    /* align-self allows individual items to override the align-items value of the flex container */
+    align-self: flex-start;
+}
+
+.fourth {
+    background-color: yellow;
+}
